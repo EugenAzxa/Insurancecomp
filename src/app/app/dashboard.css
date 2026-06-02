@@ -4,6 +4,24 @@
    Reuses the brand CSS variables defined in globals.css.
    ============================================================ */
 
+/* --- Neutralize marketing globals that leak into /app ---
+   globals.css is loaded app-wide via the root layout and contains bare
+   `nav { position: sticky; top: 0; border-bottom; backdrop-filter }` and
+   `footer {…}` / `body {…}` rules meant only for the landing page. They
+   bleed onto the dashboard's <nav>/elements. These overrides win by being
+   scoped under .dash (and !important where the leaked prop must be reset). */
+.dash nav {
+  position: static;
+  top: auto;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+.dash a {
+  color: inherit;
+}
+
 .dash {
   --dash-bg: #f4f6fb;
   --dash-card: #ffffff;
@@ -489,7 +507,9 @@
 }
 
 /* ---------- Bottom tab nav ---------- */
-.dash-tabs {
+/* `.dash nav.dash-tabs` so it outranks the `.dash nav` reset above and the
+   leaked marketing `nav` rule. */
+.dash nav.dash-tabs {
   position: fixed;
   bottom: 0;
   left: 50%;
