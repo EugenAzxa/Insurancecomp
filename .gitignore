@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# original design source (kept locally, not part of the app)
+/index.html
+/atlas_website.zip
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
