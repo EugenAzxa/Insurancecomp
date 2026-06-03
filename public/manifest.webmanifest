@@ -1,7 +1,7 @@
 {
   "name": "QuietWorld",
   "short_name": "QuietWorld",
-  "description": "End-of-life insurance, rebuilt as one simple $25/month subscription.",
+  "description": "End-of-life insurance, rebuilt as one simple $15/month subscription.",
   "start_url": "/app?source=pwa",
   "scope": "/",
   "display": "standalone",

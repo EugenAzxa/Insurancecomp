@@ -96,7 +96,7 @@ export default function Home() {
     setJoined(true);
   }
 
-  // ---------- Stripe checkout (single $25/mo subscription) ----------
+  // ---------- Stripe checkout (single $15/mo subscription) ----------
   async function startCheckout() {
     if (checkoutLoading) return;
     setCheckoutLoading(true);
@@ -150,7 +150,7 @@ export default function Home() {
                 New · Now accepting Canadian waitlist
               </div>
               <h1>
-                $25 a month. <br />
+                $15 a month. <br />
                 For <span className="serif">what comes next.</span>
               </h1>
               <p className="hero-sub">
@@ -314,7 +314,7 @@ export default function Home() {
       <section id="easy">
         <div className="container">
           <div className="section-head-center">
-            <div className="section-eyebrow">What you get for $25/month</div>
+            <div className="section-eyebrow">What you get for $15/month</div>
             <h2 className="section-title">
               Four things{" "}
               <span className="serif">
@@ -424,7 +424,7 @@ export default function Home() {
           </div>
 
           <div className="easy-tagline">
-            All of this. <strong>$25 a month.</strong> Cancel anytime.
+            All of this. <strong>$15 a month.</strong> Cancel anytime.
             <br />
             <em>
               One good thing you did for your family — long before they ever
@@ -468,7 +468,7 @@ export default function Home() {
           <div className="section-head-center">
             <div className="section-eyebrow">The plan</div>
             <h2 className="section-title">
-              One plan. <span className="serif">$25 a month.</span>
+              One plan. <span className="serif">$15 a month.</span>
             </h2>
             <p className="section-sub">
               Everything you need so your family never has to plan a funeral on
@@ -618,7 +618,7 @@ export default function Home() {
                 <span className="ic-x">×</span>&quot;Call for a quote&quot;
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>One price, $25/mo — no hidden
+                <span className="ic-check">✓</span>One price, $15/mo — no hidden
                 fees
               </div>
             </div>
@@ -677,7 +677,7 @@ export default function Home() {
               <div className="step-num">1</div>
               <h3>Sign up</h3>
               <p>
-                One $25/month subscription. Everything included. No tier picker,
+                One $15/month subscription. Everything included. No tier picker,
                 no quote forms.
               </p>
             </div>

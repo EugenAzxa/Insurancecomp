@@ -488,7 +488,7 @@ function PlanTab({ name }: { name: string }) {
         <div className="dash-plan-badge">QUIETWORLD SUBSCRIPTION</div>
         <div className="dash-plan-price">
           <span className="cur">$</span>
-          <span className="num">25</span>
+          <span className="num">15</span>
           <span className="per">/mo</span>
         </div>
         <div className="dash-plan-status">
