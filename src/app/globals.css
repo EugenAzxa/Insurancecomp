@@ -1704,21 +1704,18 @@ body { font-family: var(--qw-sans) !important; }
 /* ============ RELIGION ORBIT ============ */
 .rel-orbit-wrap {
   position: relative;
-  width: 580px; height: 580px;
+  width: 660px; height: 660px;
   margin: 60px auto 0;
   display: flex; align-items: center; justify-content: center;
   max-width: 100%;
 }
 .rel-orbit-ring {
   position: absolute;
-  width: 520px; height: 520px;
+  width: 600px; height: 600px;
   border-radius: 50%;
   border: 1px dashed rgba(37,99,235,0.18);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-}
-@media (max-width: 640px) {
-  .rel-orbit-ring { width: 320px; height: 320px; }
 }
 
 .rel-orbit-item {
