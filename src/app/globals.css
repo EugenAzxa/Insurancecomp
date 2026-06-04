@@ -1767,13 +1767,39 @@ body { font-family: var(--qw-sans) !important; }
   font-style: italic; letter-spacing: 0.3px;
 }
 @media (max-width: 640px) {
-  .rel-orbit-item {
-    --radius: 160px !important;
-    width: 48px; height: 48px; margin: -24px;
+  /* On mobile: switch from orbit to a flat 4-column icon grid */
+  .rel-orbit-wrap {
+    width: 100%; height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+    padding: 0 8px;
   }
-  .rel-orbit-symbol { width: 36px; height: 36px; border-radius: 9px; }
-  .rel-orbit-label { display: none; }
-  .rel-orbit-wrap { width: 360px; height: 360px; margin-top: 40px; }
+  .rel-orbit-ring { display: none; }
+  .rel-orbit-item {
+    position: static;
+    top: auto; left: auto;
+    width: auto; height: auto;
+    margin: 0;
+    transform: none !important;
+    animation: none !important;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .rel-orbit-symbol {
+    width: 52px; height: 52px; border-radius: 14px;
+  }
+  .rel-orbit-label {
+    display: block;
+    font-size: 9px;
+  }
+  .rel-orbit-caption {
+    position: static;
+    transform: none;
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    white-space: normal;
+  }
 }
 
 /* ============ RELIGION SECTION WRAPPER ============ */
@@ -1782,4 +1808,48 @@ body { font-family: var(--qw-sans) !important; }
   padding-top: 64px;
   border-top: 1px solid var(--slate-200);
   text-align: center;
+}
+
+/* ============ MOBILE CLEANUP PASS ============ */
+@media (max-width: 480px) {
+  /* Nav: hide the "Open the app" button too on very small screens,
+     keep just the logo */
+  .nav-links { gap: 12px; }
+  .btn-nav { padding: 9px 14px; font-size: 13px; }
+
+  /* Waitlist counter number — prevent overflow */
+  .wl-num { font-size: 40px; }
+  .wl-urgency { font-size: 11px; padding: 4px 10px; text-align: center; }
+
+  /* Hero h1 */
+  .hero h1 { font-size: clamp(36px, 9vw, 56px); }
+
+  /* Stats charts — single column below 480 */
+  .stats-charts-row { grid-template-columns: 1fr; }
+
+  /* Single plan grid — already 1-col via existing rule */
+
+  /* Voices grid spacing */
+  .voices-grid { gap: 16px; }
+
+  /* FAQ padding */
+  .faq-q { font-size: 15px; }
+  .faq-a { padding-right: 24px; }
+
+  /* Religion section */
+  .rel-section { margin-top: 48px; padding-top: 40px; }
+  .rel-orbit-wrap { gap: 12px; padding: 0 4px; }
+
+  /* Support widget — ensure it clears the bottom on very small phones */
+  .sw-fab { bottom: 16px; right: 10px; padding: 12px 16px; font-size: 13px; }
+
+  /* getapp section phone mockup */
+  .phone { width: 180px; height: 380px; }
+}
+
+@media (max-width: 380px) {
+  /* Extra small phones (SE, etc.) */
+  .wl-num { font-size: 34px; }
+  .rel-orbit-wrap { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .rel-orbit-symbol { width: 44px; height: 44px; }
 }
