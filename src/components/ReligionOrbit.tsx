@@ -214,54 +214,10 @@ export default function ReligionOrbit() {
 
       {/* Planet in the center */}
       <div className="rel-planet">
-        <svg viewBox="0 0 120 120" width="120" height="120" className="rel-planet-svg">
-          <defs>
-            <radialGradient id="planetGrad" cx="38%" cy="32%" r="65%">
-              <stop offset="0%" stopColor="#60a5fa"/>
-              <stop offset="45%" stopColor="#2563eb"/>
-              <stop offset="100%" stopColor="#0a1837"/>
-            </radialGradient>
-            <radialGradient id="planetShine" cx="30%" cy="28%" r="55%">
-              <stop offset="0%" stopColor="rgba(255,255,255,0.35)"/>
-              <stop offset="100%" stopColor="rgba(255,255,255,0)"/>
-            </radialGradient>
-            <clipPath id="planetClip">
-              <circle cx="60" cy="60" r="44"/>
-            </clipPath>
-          </defs>
-
-          {/* Globe body */}
-          <circle cx="60" cy="60" r="44" fill="url(#planetGrad)"/>
-
-          {/* Continent-like patches */}
-          <g clipPath="url(#planetClip)" opacity="0.55">
-            <ellipse cx="52" cy="45" rx="14" ry="9" fill="#38bdf8" opacity="0.7"/>
-            <ellipse cx="72" cy="58" rx="10" ry="14" fill="#34d399" opacity="0.6"/>
-            <ellipse cx="44" cy="68" rx="12" ry="7" fill="#34d399" opacity="0.5"/>
-            <ellipse cx="68" cy="78" rx="8" ry="5" fill="#38bdf8" opacity="0.4"/>
-            <ellipse cx="38" cy="54" rx="6" ry="10" fill="#34d399" opacity="0.45"/>
-          </g>
-
-          {/* Latitude lines */}
-          <g clipPath="url(#planetClip)" stroke="rgba(255,255,255,0.12)" strokeWidth="1" fill="none">
-            <ellipse cx="60" cy="60" rx="44" ry="14"/>
-            <ellipse cx="60" cy="60" rx="44" ry="28"/>
-            <ellipse cx="60" cy="60" rx="44" ry="40"/>
-          </g>
-
-          {/* Shine */}
-          <circle cx="60" cy="60" r="44" fill="url(#planetShine)"/>
-
-          {/* Ring / orbit band */}
-          <ellipse cx="60" cy="60" rx="58" ry="14"
-            fill="none" stroke="rgba(148,163,184,0.45)" strokeWidth="6"
-            strokeDasharray="none"/>
-          {/* Ring shadow behind planet */}
-          <ellipse cx="60" cy="60" rx="58" ry="14"
-            fill="none" stroke="rgba(15,23,42,0.35)" strokeWidth="7"
-            strokeDasharray="182 183"
-            strokeDashoffset="0"/>
-        </svg>
+        <div className="rel-planet-globe">
+          <div className="rel-planet-surface" />
+          <div className="rel-planet-shine" />
+        </div>
       </div>
 
       {SYMBOLS.map((s, i) => {
