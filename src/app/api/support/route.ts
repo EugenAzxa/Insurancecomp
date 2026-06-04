@@ -2,37 +2,47 @@ import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
 
 function cannedReply(q: string): string {
-  if (/price|cost|how much|\$15|15.?month|pricing/i.test(q))
+  const t = q.toLowerCase().trim();
+
+  // Greetings — broad match including typos like "heelo", "helo", "sup"
+  if (/^(h+e+l+o*|hi+|hey+|sup|yo|good\s*(morning|afternoon|evening)|howdy|hiya|greet|hello)/i.test(t) || t.length < 6)
+    return "Hi! Happy to help. You can ask me anything about QuietWorld — what's covered, how to sign up, pricing, cancellation, or how to install the app. What's on your mind?";
+
+  if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
     return "QuietWorld is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
-  if (/what.*includ|what.*get|cover|benefit|plan/i.test(q))
+  if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
     return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal help (will, POA, estate paperwork), debt navigation ($15,000 family runway + specialists), and body transportation anywhere in Canada including international repatriation.";
-  if (/cancel|quit|stop|leave/i.test(q))
+  if (/cancel|quit|stop|leave|refund/i.test(t))
     return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
-  if (/wait|period|when.*cover|24 month|day 1/i.test(q))
-    return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums — that's standard for simplified-issue products. During the first 24 months your family receives a pro-rated payout.";
-  if (/sign.?up|join|start|how.*work|enroll|register/i.test(q))
+  if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
+    return "Accidental death is covered from day 1. For natural causes, full benefits pay out after 24 months of premiums. During the first 24 months your family receives a pro-rated payout.";
+  if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
     return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching in Ontario first.";
-  if (/age|old|young|18|75/i.test(q))
+  if (/age|old|young|18|75|eligib/i.test(t))
     return "QuietWorld is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
-  if (/exam|medical|health|doctor/i.test(q))
+  if (/exam|medical|health question|doctor|test/i.test(t))
     return "No medical exam required — just a quick 5-question health questionnaire at signup. Most people are approved instantly.";
-  if (/funeral|cremation|burial|casket|service/i.test(q))
+  if (/funeral|cremation|burial|casket|service|ceremony/i.test(t))
     return "Your subscription covers the full funeral: cremation, traditional burial, green burial, or aquamation — your choice. Casket or urn, live-streamed memorial, obituary in 2 publications, and 10 certified death certificates are all included.";
-  if (/legal|will|poa|estate|power of attorney/i.test(q))
+  if (/legal|will|poa|estate|power of attorney|probate/i.test(t))
     return "Legal help is fully included: an attorney-prepared will, power of attorney, advance directive, estate paperwork & probate guidance, digital legacy management, and family beneficiary setup.";
-  if (/debt|money|cash|benefit|family runway/i.test(q))
+  if (/debt|money|cash|benefit|family runway|creditor|loan/i.test(t))
     return "The debt navigation benefit connects your family to specialists who restructure and negotiate outstanding obligations — plus a $15,000 cash benefit for family runway and apartment/room cleanout coordination.";
-  if (/transport|repatri|abroad|travel|body/i.test(q))
+  if (/transport|repatri|abroad|travel|body|move|ship/i.test(t))
     return "Body transport is included anywhere in Canada. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
-  if (/app|dashboard|download|install|phone/i.test(q))
-    return "You can install QuietWorld directly to your home screen — no app store needed. Tap the Get the app button in the menu and follow the steps. Once installed, it opens full-screen like a native app with your personal dashboard.";
-  if (/real|legit|trust|carrier|underwr/i.test(q))
+  if (/app|dashboard|download|install|phone|home screen|pwa/i.test(t))
+    return "You can install QuietWorld directly to your home screen — no app store needed. Tap Get the app in the menu and follow the steps. Once installed it opens full-screen like a native app with your personal dashboard.";
+  if (/real|legit|trust|carrier|underwr|licensed|safe|scam/i.test(t))
     return "QuietWorld subscriptions are underwritten by a licensed Canadian carrier with full capital reserves and regulatory oversight. We handle the experience; they handle the underwriting.";
-  if (/ontario|canada|province|where/i.test(q))
+  if (/ontario|canada|province|where|location|available|launch/i.test(t))
     return "We're launching in Ontario first, then expanding across Canada. Join the waitlist to get founder pricing and early access.";
-  if (/hello|hi|hey|help|support/i.test(q))
-    return "Hi there! I'm here to help with any questions about QuietWorld. Ask me about what's covered, how to sign up, pricing, or anything else — or scroll up to read the FAQ.";
-  return "Great question! For the most accurate answer, I'd suggest checking our FAQ section on this page, or join the waitlist at the bottom and our team will reach out personally. Is there anything else I can help with?";
+  if (/family|spouse|couple|partner|children|parent/i.test(t))
+    return "You can subscribe individually or as a couple — two adults in the same household get 10% off. Your family is notified and connected to a QuietWorld concierge the day they need us.";
+  if (/concierge|contact|call|phone number|support|help/i.test(t))
+    return "Your family gets one dedicated QuietWorld concierge who handles everything — funeral home, casket, transport, paperwork, even the apartment cleanout. One call, everything handled.";
+
+  // Warm, helpful fallback — not a dead end
+  return "Thanks for reaching out! I can answer questions about our $15/month plan, what's covered, how to sign up, cancellation, and more. Could you tell me a bit more about what you'd like to know?";
 }
 
 const SYSTEM_PROMPT = `You are the QuietWorld Support assistant. You help visitors understand the QuietWorld subscription, navigate the website, and answer questions.
