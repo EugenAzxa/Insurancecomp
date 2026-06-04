@@ -129,7 +129,7 @@ export function WaitlistCounter() {
         <span className="wl-num">{displayed.toLocaleString()}+</span>
       </div>
       <span className="wl-label">Canadians already on the waitlist</span>
-      <span className="wl-urgency">⚡ Spots filling fast — lock your rate now</span>
+      <span className="wl-urgency">+ Spots filling fast — lock your rate now</span>
     </div>
   );
 }

@@ -721,7 +721,7 @@ export default function Home() {
           </div>
           <div className="why-grid">
             <div className="why-card">
-              <div className="why-icon">🛡️</div>
+              <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
               <h3>Backed by a real carrier</h3>
               <p>
                 Your policy is underwritten by a licensed Canadian life
@@ -730,7 +730,7 @@ export default function Home() {
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">💬</div>
+              <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <h3>Concierge, not a call center</h3>
               <p>
                 When your family calls QuietWorld, they get one real person who
@@ -739,7 +739,7 @@ export default function Home() {
               </p>
             </div>
             <div className="why-card">
-              <div className="why-icon">📱</div>
+              <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
               <h3>Built for who you are now</h3>
               <p>
                 Final-expense coverage has been sold the same way for 50 years

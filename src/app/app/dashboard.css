@@ -551,3 +551,25 @@
   color: var(--dash-accent);
   background: #eff6ff;
 }
+
+/* Text icon badges (replace emojis) */
+.dash-ico-text {
+  font-size: 9px !important;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: var(--dash-accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 5px;
+  min-width: 28px;
+  text-align: center;
+}
+/* Mood emoji text */
+.dash-mood-emoji {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--dash-muted);
+}
+.dash-mood.active .dash-mood-emoji { color: var(--dash-accent); }

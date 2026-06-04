@@ -110,7 +110,7 @@ export default function SupportWidget() {
               onClick={() => setOpen(false)}
               aria-label="Close support"
             >
-              ✕
+              &times;
             </button>
           </div>
 
@@ -118,7 +118,7 @@ export default function SupportWidget() {
             {/* Welcome message */}
             <div className="sw-msg sw-msg-assistant">
               <div className="sw-bubble">
-                Hi there 👋 I&apos;m here to help with any questions about
+                Hi there! I&apos;m here to help with any questions about
                 QuietWorld or to help you navigate the site.
               </div>
             </div>
@@ -181,10 +181,10 @@ export default function SupportWidget() {
         aria-label={open ? "Close support" : "Open support"}
       >
         {open ? (
-          <span className="sw-fab-icon">✕</span>
+          <span className="sw-fab-icon">&times;</span>
         ) : (
           <>
-            <span className="sw-fab-icon">💬</span>
+            <svg className="sw-fab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             <span className="sw-fab-label">Support</span>
           </>
         )}

@@ -132,7 +132,7 @@ export default function Dashboard() {
             <span className="dash-brand-name">QuietWorld</span>
           </div>
           <a href="/" className="dash-exit" aria-label="Back to website">
-            ✕
+            x
           </a>
         </div>
         <div className="dash-greeting">
@@ -173,13 +173,13 @@ export default function Dashboard() {
           className={tab === "trends" ? "active" : ""}
           onClick={() => setTab("trends")}
         >
-          <span className="dash-tab-ico">📈</span>Trends
+          <span className="dash-tab-ico">&#9650;</span>Trends
         </button>
         <button
           className={tab === "plan" ? "active" : ""}
           onClick={() => setTab("plan")}
         >
-          <span className="dash-tab-ico">🛡️</span>My plan
+          <span className="dash-tab-ico">&#9632;</span>My plan
         </button>
       </nav>
     </div>
@@ -209,10 +209,10 @@ function TodayTab({
   onProfile: (p: Partial<Profile>) => void;
 }) {
   const moods: { key: Mood; label: string; emoji: string }[] = [
-    { key: "great", label: "Great", emoji: "😄" },
-    { key: "good", label: "Good", emoji: "🙂" },
-    { key: "ok", label: "Okay", emoji: "😐" },
-    { key: "low", label: "Low", emoji: "😔" },
+    { key: "great", label: "Great", emoji: ":D" },
+    { key: "good", label: "Good", emoji: ":)" },
+    { key: "ok", label: "Okay", emoji: ":|" },
+    { key: "low", label: "Low", emoji: ":(" },
   ];
 
   return (
@@ -233,7 +233,7 @@ function TodayTab({
 
       {/* Steps */}
       <Stepper
-        icon="🚶"
+        icon="steps"
         title="Steps"
         unit="steps"
         value={day.steps}
@@ -245,7 +245,7 @@ function TodayTab({
 
       {/* Sleep */}
       <Stepper
-        icon="😴"
+        icon="sleep"
         title="Sleep"
         unit="hours"
         value={day.sleep}
@@ -258,7 +258,7 @@ function TodayTab({
 
       {/* Water */}
       <Stepper
-        icon="💧"
+        icon="water"
         title="Water"
         unit="glasses"
         value={day.water}
@@ -271,7 +271,7 @@ function TodayTab({
       {/* Weight */}
       <div className="dash-card">
         <div className="dash-card-head">
-          <span className="dash-card-ico">⚖️</span>
+          <span className="dash-card-ico dash-ico-text">kg</span>
           <span className="dash-card-title">Weight</span>
         </div>
         <div className="dash-weight">
@@ -291,7 +291,7 @@ function TodayTab({
       {/* Mood */}
       <div className="dash-card">
         <div className="dash-card-head">
-          <span className="dash-card-ico">💬</span>
+          <span className="dash-card-ico dash-ico-text">mood</span>
           <span className="dash-card-title">Mood today</span>
         </div>
         <div className="dash-moods">
@@ -342,7 +342,7 @@ function Stepper({
   return (
     <div className="dash-card">
       <div className="dash-card-head">
-        <span className="dash-card-ico">{icon}</span>
+        <span className="dash-card-ico dash-ico-text">{icon}</span>
         <span className="dash-card-title">{title}</span>
         <span className="dash-card-goal">Goal {fmt(goal)}</span>
       </div>
@@ -476,10 +476,10 @@ function BarChart({
 
 function PlanTab({ name }: { name: string }) {
   const coverage = [
-    { icon: "⚱️", label: "Funeral — your way", note: "Cremation, burial, service, paperwork" },
-    { icon: "📄", label: "Legal help", note: "Will, POA, estate paperwork" },
-    { icon: "🛟", label: "Debt navigation", note: "$15,000 family runway + specialists" },
-    { icon: "✈️", label: "Transportation", note: "Anywhere in Canada + repatriation" },
+    { icon: "urn", label: "Funeral — your way", note: "Cremation, burial, service, paperwork" },
+    { icon: "doc", label: "Legal help", note: "Will, POA, estate paperwork" },
+    { icon: "debt", label: "Debt navigation", note: "$15,000 family runway + specialists" },
+    { icon: "car", label: "Transportation", note: "Anywhere in Canada + repatriation" },
   ];
 
   return (
@@ -517,7 +517,7 @@ function PlanTab({ name }: { name: string }) {
 
       <div className="dash-card dash-concierge">
         <div className="dash-card-head">
-          <span className="dash-card-ico">📞</span>
+          <span className="dash-card-ico dash-ico-text">call</span>
           <span className="dash-card-title">Your concierge</span>
         </div>
         <p>
