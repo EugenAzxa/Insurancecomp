@@ -474,12 +474,41 @@ function BarChart({
  * Plan tab — QuietWorld subscription & coverage
  * ------------------------------------------------------------------ */
 
+const CoverageIcons: Record<string, React.ReactNode> = {
+  funeral: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+      <path d="M12 2C9 2 7 4 7 7v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V7c0-3-2-5-5-5z"/>
+      <line x1="12" y1="7" x2="12" y2="14"/><line x1="9" y1="10" x2="15" y2="10"/>
+    </svg>
+  ),
+  legal: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/>
+    </svg>
+  ),
+  debt: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+      <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/>
+      <path d="M12 6v2m0 8v2M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1 2-2.5 2.5V15"/>
+    </svg>
+  ),
+  transport: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+      <path d="M5 17H3v-5l2-5h13l3 5v5h-2"/>
+      <circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>
+      <line x1="9" y1="17" x2="15" y2="17"/>
+    </svg>
+  ),
+};
+
 function PlanTab({ name }: { name: string }) {
   const coverage = [
-    { icon: "urn", label: "Funeral — your way", note: "Cremation, burial, service, paperwork" },
-    { icon: "doc", label: "Legal help", note: "Will, POA, estate paperwork" },
-    { icon: "debt", label: "Debt navigation", note: "$15,000 family runway + specialists" },
-    { icon: "car", label: "Transportation", note: "Anywhere in Canada + repatriation" },
+    { icon: "funeral", label: "Funeral — your way", note: "Cremation, burial, service, paperwork" },
+    { icon: "legal",   label: "Legal help",         note: "Will, POA, estate paperwork" },
+    { icon: "debt",    label: "Debt navigation",    note: "$15,000 family runway + specialists" },
+    { icon: "transport", label: "Transportation",   note: "Anywhere in Canada + repatriation" },
   ];
 
   return (
@@ -504,7 +533,7 @@ function PlanTab({ name }: { name: string }) {
         <ul className="dash-coverage">
           {coverage.map((c) => (
             <li key={c.label}>
-              <span className="dash-cov-ico">{c.icon}</span>
+              <span className="dash-cov-ico">{CoverageIcons[c.icon]}</span>
               <div>
                 <div className="dash-cov-label">{c.label}</div>
                 <div className="dash-cov-note">{c.note}</div>
@@ -517,17 +546,22 @@ function PlanTab({ name }: { name: string }) {
 
       <div className="dash-card dash-concierge">
         <div className="dash-card-head">
-          <span className="dash-card-ico dash-ico-text">call</span>
-          <span className="dash-card-title">Your concierge</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" width="20" height="20" style={{flexShrink:0}}>
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.37 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span className="dash-card-title">24/7 Concierge</span>
         </div>
         <p>
           One number for {name || "your family"} when it matters most. We handle
           the funeral home, casket, transport, paperwork — everything.
         </p>
-        <a href="tel:+18005551234" className="dash-concierge-btn">
-          Call concierge · 1-800-555-1234
+        <a href="tel:+18554784569" className="dash-concierge-btn">
+          Call · 1-855-478-4569
         </a>
-        <a href="/#plans" className="dash-link">
+        <a href="mailto:support@quiteworld.com" className="dash-concierge-btn" style={{marginTop: "8px", background: "#f8fafc", color: "var(--dash-ink)", border: "1px solid var(--dash-line)"}}>
+          Email · support@quiteworld.com
+        </a>
+        <a href="/#plans" className="dash-link" style={{marginTop: "12px"}}>
           Manage subscription →
         </a>
       </div>

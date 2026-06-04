@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import InstallApp from "./InstallApp";
 import { WaitlistCounter, FuneralCostChart, AffordabilityChart } from "@/components/LiveStats";
+import ReligionOrbit from "@/components/ReligionOrbit";
 
 // The dotLottie player is a custom element registered by the script loaded in
 // layout.tsx. Declare it so TSX/JSX accepts <dotlottie-wc>.
@@ -570,6 +571,20 @@ export default function Home() {
             Lock your current rate for life with a single 12-month upfront
             payment.
           </div>
+
+          <div className="rel-section">
+            <div className="section-head-center" style={{ marginBottom: 0 }}>
+              <div className="section-eyebrow">For everyone</div>
+              <h2 className="section-title" style={{ fontSize: "clamp(28px,3.5vw,42px)" }}>
+                Respectful of all <span className="serif">faiths &amp; traditions.</span>
+              </h2>
+              <p className="section-sub" style={{ fontSize: "16px" }}>
+                Whatever your beliefs, your end-of-life wishes are honoured exactly as
+                you choose — cremation, burial, aquamation, or any faith-specific tradition.
+              </p>
+            </div>
+            <ReligionOrbit />
+          </div>
         </div>
       </section>
 
@@ -737,6 +752,17 @@ export default function Home() {
                 handles everything: funeral home, casket, transport, paperwork,
                 even the cleanup of your apartment.
               </p>
+              <div className="why-contact">
+                <a href="tel:+18554784569" className="why-contact-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.37 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  1-855-478-4569
+                </a>
+                <a href="mailto:support@quiteworld.com" className="why-contact-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  support@quiteworld.com
+                </a>
+                <span className="why-contact-hours">Available 24/7</span>
+              </div>
             </div>
             <div className="why-card">
               <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
