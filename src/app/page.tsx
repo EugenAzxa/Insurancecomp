@@ -129,7 +129,7 @@ export default function Home() {
       {/* ============ NAV ============ */}
       <nav>
         <div className="nav-inner">
-          <a href="/" className="logo" style={{display:"flex",alignItems:"center",gap:"10px",textDecoration:"none"}}>
+          <a href="/" className="logo" style={{display:"flex",alignItems:"center",gap:"4px",textDecoration:"none"}}>
               <svg viewBox="0 0 86 52" width="86" height="38" xmlns="http://www.w3.org/2000/svg" style={{flexShrink:0}}>
                 <defs>
                   <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
