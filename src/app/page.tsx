@@ -290,9 +290,8 @@ export default function Home() {
               families aren&apos;t ready for.
             </h2>
             <p className="section-sub">
-              Final-expense coverage exists. But it&apos;s sold through
-              50-year-old agent networks, marketed to seniors only, and
-              impossible to understand.
+              Coverage exists. It&apos;s just sold through outdated agent
+              networks — built for seniors, impossible to understand.
             </p>
           </div>
           <div className="problem-cards">
