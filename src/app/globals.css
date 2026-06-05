@@ -1606,6 +1606,11 @@ body { font-family: var(--qw-sans) !important; }
 .sw-form button:hover:not(:disabled) { background: var(--blue-600, #2563eb); }
 .sw-form button:disabled { opacity: 0.4; cursor: not-allowed; }
 
+/* Hide support widget on mobile — email contact is in the page */
+@media (max-width: 768px) {
+  .sw-fab { display: none !important; }
+  .sw-panel { display: none !important; }
+}
 /* Keep widget above dashboard bottom nav on /app */
 @media (max-width: 600px) {
   .sw-fab { bottom: 88px; right: 12px; }
