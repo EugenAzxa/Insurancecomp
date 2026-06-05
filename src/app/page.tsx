@@ -27,6 +27,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [joined, setJoined] = useState(false);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
   // ---------- GLOBAL BUBBLES (floating decoration across sections) ----------
@@ -130,38 +131,50 @@ export default function Home() {
       <nav>
         <div className="nav-inner">
           <a href="/" className="logo" style={{display:"flex",alignItems:"center",gap:"4px",textDecoration:"none"}}>
-              <svg viewBox="0 0 86 52" width="86" height="38" xmlns="http://www.w3.org/2000/svg" style={{flexShrink:0}}>
-                <defs>
-                  <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6"/>
-                    <stop offset="100%" stopColor="#1d4ed8"/>
-                  </linearGradient>
-                </defs>
-                <ellipse cx="21" cy="26" rx="17" ry="13" fill="none" stroke="url(#ng)" strokeWidth="6" strokeLinecap="round"/>
-                <ellipse cx="55" cy="26" rx="17" ry="13" fill="none" stroke="url(#ng)" strokeWidth="6" strokeLinecap="round"/>
-                <line x1="38" y1="10" x2="38" y2="42" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" transform="rotate(-35,38,26)"/>
-                <path d="M38,6 Q40,12 38,18 Q36,12 38,6" fill="#93c5fd" transform="rotate(-35,38,26)"/>
-              </svg>
-              <span style={{fontFamily:"'Instrument Serif',Georgia,serif",fontStyle:"italic",fontSize:"24px",fontWeight:700,color:"#0f172a",letterSpacing:"-0.5px",whiteSpace:"nowrap"}}>Finally Peace</span>
-            </a>
+            <svg viewBox="0 0 86 52" width="86" height="38" xmlns="http://www.w3.org/2000/svg" style={{flexShrink:0}}>
+              <defs><linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#3b82f6"/><stop offset="100%" stopColor="#1d4ed8"/></linearGradient></defs>
+              <ellipse cx="21" cy="26" rx="17" ry="13" fill="none" stroke="url(#ng)" strokeWidth="6" strokeLinecap="round"/>
+              <ellipse cx="55" cy="26" rx="17" ry="13" fill="none" stroke="url(#ng)" strokeWidth="6" strokeLinecap="round"/>
+              <line x1="38" y1="10" x2="38" y2="42" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" transform="rotate(-35,38,26)"/>
+              <path d="M38,6 Q40,12 38,18 Q36,12 38,6" fill="#93c5fd" transform="rotate(-35,38,26)"/>
+            </svg>
+            <span style={{fontFamily:"'Instrument Serif',Georgia,serif",fontStyle:"italic",fontSize:"24px",fontWeight:700,color:"#0f172a",letterSpacing:"-0.5px",whiteSpace:"nowrap"}}>Finally Peace</span>
+          </a>
+          {/* Desktop nav links */}
           <div className="nav-links">
             <a href="#easy">What you get</a>
             <a href="#plans">The plan</a>
             <a href="#how">How it works</a>
             <a href="#faq">FAQ</a>
-            <a href="/subscribe" className="btn btn-primary" style={{padding:"10px 20px",fontSize:"14px"}}>
-              Join the waitlist →
-            </a>
+            <a href="/subscribe" className="btn btn-primary" style={{padding:"10px 20px",fontSize:"14px"}}>Join the waitlist →</a>
             <a href="/app" className="btn btn-nav">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="15" height="15" style={{display:"inline-block",verticalAlign:"middle",marginRight:"6px",marginTop:"-2px"}}>
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="15" height="15" style={{display:"inline-block",verticalAlign:"middle",marginRight:"6px",marginTop:"-2px"}}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               Open the app
             </a>
           </div>
+          {/* Hamburger button — mobile only */}
+          <button className="nav-burger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
+            {menuOpen ? (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            ) : (
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            )}
+          </button>
         </div>
+        {/* Mobile menu dropdown */}
+        {menuOpen && (
+          <div className="nav-mobile-menu" onClick={() => setMenuOpen(false)}>
+            <a href="#easy">What you get</a>
+            <a href="#plans">The plan</a>
+            <a href="#how">How it works</a>
+            <a href="#faq">FAQ</a>
+            <a href="/subscribe" className="btn btn-primary" style={{width:"100%",justifyContent:"center"}}>Join the waitlist →</a>
+            <a href="/app" className="btn btn-nav" style={{width:"100%",justifyContent:"center"}}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="15" height="15" style={{display:"inline-block",verticalAlign:"middle",marginRight:"6px"}}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Open the app
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* ============ HERO ============ */}

@@ -1369,7 +1369,12 @@ body { font-family: var(--qw-sans) !important; }
   @media (max-width: 480px) {
     .steps { grid-template-columns: 1fr; }
     .container { padding: 0 20px; }
-    .easy-steps { grid-template-columns: 1fr; }
+    .easy-steps { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .easy-card { padding: 14px 12px; border-radius: 14px; }
+    .easy-num { width: 32px; height: 32px; font-size: 14px; margin-bottom: 8px; }
+    .easy-icon { width: 28px; height: 28px; margin-bottom: 8px; }
+    .easy-card h3 { font-size: 14px; margin-bottom: 6px; }
+    .easy-card p { font-size: 12px; line-height: 1.45; }
     .single-plan-grid { grid-template-columns: 1fr; }
   }
 
@@ -1477,6 +1482,33 @@ body { font-family: var(--qw-sans) !important; }
   .getapp-grid { grid-template-columns: 1fr; gap: 44px; }
   .getapp-visual { order: -1; }
   .phone { width: 220px; height: 460px; }
+}
+
+/* ============ HAMBURGER MENU ============ */
+.nav-burger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  color: var(--navy-900); padding: 6px; border-radius: 8px;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-mobile-menu {
+  display: flex; flex-direction: column; gap: 4px;
+  background: var(--white);
+  border-top: 1px solid var(--slate-200);
+  padding: 16px 20px 20px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.1);
+}
+.nav-mobile-menu a:not(.btn) {
+  display: block; padding: 13px 0;
+  font-size: 17px; font-weight: 600; color: var(--navy-900);
+  text-decoration: none; border-bottom: 1px solid var(--slate-100);
+}
+.nav-mobile-menu a:not(.btn):last-of-type { border-bottom: none; }
+.nav-mobile-menu .btn { margin-top: 8px; text-align: center; justify-content: center; }
+
+@media (max-width: 480px) {
+  .nav-burger { display: flex; }
+  .nav-links { display: none; }
 }
 
 .getapp-open-link {
@@ -1817,10 +1849,20 @@ body { font-family: var(--qw-sans) !important; }
 
 /* ============ MOBILE CLEANUP PASS ============ */
 @media (max-width: 480px) {
-  /* Nav: only show Join button, hide Open the app */
+  /* Nav: only show Join button, float Open the app to bottom-right */
   .nav-links { gap: 8px; }
-  .btn-nav { display: none !important; }
   .btn-primary { padding: 10px 14px !important; font-size: 13px !important; }
+  .btn-nav {
+    position: fixed !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    z-index: 998;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    border-radius: 999px !important;
+  }
+  /* Push support button above the Open the app button */
+  .sw-fab { bottom: 72px !important; }
 
   /* Waitlist counter number — prevent overflow */
   .wl-num { font-size: 40px; }
