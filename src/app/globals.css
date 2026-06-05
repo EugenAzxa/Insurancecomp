@@ -261,7 +261,7 @@ body { font-family: var(--qw-sans) !important; }
     border-bottom: 1px solid var(--slate-200);
   }
   .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-  .stat-item { text-align: left; }
+  .stat-item { text-align: center; }
   .stat-num {
     font-family: 'Instrument Serif', serif; font-style: italic;
     font-size: 56px; font-weight: 400; color: var(--blue-600);
@@ -1334,7 +1334,9 @@ body { font-family: var(--qw-sans) !important; }
     section { padding: 80px 0; }
     .hero { padding: 56px 0 80px; }
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; text-align: center; }
+    .stat-item { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .stat-label { max-width: 100%; text-align: center; }
     .problem-cards { grid-template-columns: 1fr; }
     .tiers { grid-template-columns: 1fr; }
     .tier-popular { transform: none; }
@@ -1607,24 +1609,9 @@ body { font-family: var(--qw-sans) !important; }
 .sw-form button:hover:not(:disabled) { background: var(--blue-600, #2563eb); }
 .sw-form button:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* Support widget — mobile safe position */
-@media (max-width: 768px) {
-  .sw-fab {
-    bottom: 20px !important;
-    right: 16px !important;
-    padding: 12px 16px !important;
-    font-size: 13px !important;
-  }
-  .sw-panel {
-    bottom: 80px !important;
-    right: 12px !important;
-    left: 12px !important;
-    width: auto !important;
-  }
-}
 /* Keep widget above dashboard bottom nav on /app */
 @media (max-width: 600px) {
-  .sw-fab { bottom: 88px; right: 12px; }
+  .sw-fab { bottom: 20px; right: 16px; padding: 12px 16px; font-size: 13px; }
   .sw-panel {
     bottom: 152px;
     right: 8px;
@@ -1830,10 +1817,10 @@ body { font-family: var(--qw-sans) !important; }
 
 /* ============ MOBILE CLEANUP PASS ============ */
 @media (max-width: 480px) {
-  /* Nav: hide the "Open the app" button too on very small screens,
-     keep just the logo */
-  .nav-links { gap: 12px; }
-  .btn-nav { padding: 9px 14px; font-size: 13px; }
+  /* Nav: only show Join button, hide Open the app */
+  .nav-links { gap: 8px; }
+  .btn-nav { display: none !important; }
+  .btn-primary { padding: 10px 14px !important; font-size: 13px !important; }
 
   /* Waitlist counter number — prevent overflow */
   .wl-num { font-size: 40px; }
