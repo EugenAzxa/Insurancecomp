@@ -789,8 +789,8 @@ body { font-family: var(--qw-sans) !important; }
     50% { box-shadow: 0 0 0 7px rgba(245,158,11,0.05); }
   }
   .trust-logos {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 24px; max-width: 720px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 24px; max-width: 520px; margin: 0 auto;
     align-items: center;
   }
   .trust-logo {

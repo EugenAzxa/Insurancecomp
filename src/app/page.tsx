@@ -233,10 +233,7 @@ export default function Home() {
               <div className="trust-logo-name">Funeral network</div>
               <div className="trust-logo-tag">100+ trusted providers</div>
             </div>
-            <div className="trust-logo">
-              <div className="trust-logo-name">Legal partner</div>
-              <div className="trust-logo-tag">Estate &amp; debt specialists</div>
-            </div>
+
           </div>
           <div className="trust-disclaimer">
             All policies are issued by a licensed, reputable carrier.
@@ -286,45 +283,29 @@ export default function Home() {
           <div className="section-head-center">
             <div className="section-eyebrow">The problem</div>
             <h2 className="section-title">
-              Death is a <span className="serif">financial emergency</span>{" "}
-              families aren&apos;t ready for.
+              Death is a <span className="serif">financial emergency.</span>
             </h2>
             <p className="section-sub">
-              Coverage exists. It&apos;s just sold through outdated agent
-              networks — built for seniors, impossible to understand.
+              Coverage exists — but it&apos;s built for your grandparents, not you.
             </p>
           </div>
           <div className="problem-cards">
             <div className="problem-card">
-              <h3>Funeral homes charge $9K–$15K — paid in cash, within a week.</h3>
-              <p>
-                Most families haven&apos;t planned for this. Many take on debt
-                or crowdfund grief on social media.
-              </p>
+              <h3>Funerals cost $9K–$15K — due in days.</h3>
+              <p>Most families aren&apos;t prepared. Many go into debt or crowdfund grief.</p>
             </div>
             <div className="problem-card">
-              <h3>
-                Existing coverage is built for someone your grandparents&apos;
-                age.
-              </h3>
-              <p>
-                Door-to-door agents, paper applications, opaque pricing. Nothing
-                that feels designed for someone who pays for their gym on their
-                phone.
-              </p>
+              <h3>Existing coverage is stuck in 1975.</h3>
+              <p>Door-to-door agents, paper forms, opaque pricing. Not built for your generation.</p>
             </div>
             <div className="problem-card">
-              <h3>The logistics swallow your family alive.</h3>
-              <p>
-                Casket selection, repatriation, debt cleanup, the apartment,
-                social media, the estate — all while they&apos;re grieving.
-              </p>
+              <h3>Your family handles everything — while grieving.</h3>
+              <p>Casket, transport, debt, the apartment, the estate. All on the worst week of their life.</p>
             </div>
             <div className="problem-card">
-              <h3>Younger generations avoid the conversation entirely.</h3>
+              <h3>73% of people under 50 have no plan.</h3>
               <p>
-                73% of people under 50 have no plan. Not because they
-                don&apos;t care. Because no one made it easy enough to start.
+                Not because they don&apos;t care. Because no one made it easy enough to start.
               </p>
             </div>
           </div>
