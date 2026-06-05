@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="inf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="feather" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White background -->
+  <rect width="512" height="512" fill="#ffffff" rx="80"/>
+
+  <!-- Infinity symbol centered -->
+  <g transform="translate(256,210)">
+    <ellipse cx="-85" cy="0" rx="80" ry="58" fill="none" stroke="url(#inf)" stroke-width="30" stroke-linecap="round"/>
+    <ellipse cx="85" cy="0" rx="80" ry="58" fill="none" stroke="url(#inf)" stroke-width="30" stroke-linecap="round"/>
+  </g>
+
+  <!-- Feather -->
+  <g transform="translate(256,110) rotate(-38, 0, 100)">
+    <line x1="0" y1="0" x2="0" y2="200" stroke="url(#feather)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0,20  Q-44,38 -55,68"  fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,55  Q-48,72 -58,104" fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0,90  Q-46,108 -54,138" fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M0,124 Q-38,140 -42,168" fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M0,20  Q44,38 55,68"    fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,55  Q48,72 58,104"   fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0,90  Q46,108 54,138"  fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M0,124 Q38,140 42,168"  fill="none" stroke="url(#feather)" stroke-width="5.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M0,0 Q6,18 0,36 Q-6,18 0,0" fill="#93c5fd"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#a78bfa">
+    <path d="M112,128 l7,17 l7,-17 l-7,-17 Z"/>
+    <path d="M140,108 l4,9  l4,-9  l-4,-9  Z" opacity="0.7"/>
+    <path d="M372,128 l7,17 l7,-17 l-7,-17 Z"/>
+    <path d="M396,108 l4,9  l4,-9  l-4,-9  Z" opacity="0.7"/>
+    <path d="M256,95  l5,13 l5,-13 l-5,-13 Z"/>
+  </g>
+
+  <!-- "Finally Peace" text at bottom -->
+  <text x="256" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#0f172a" letter-spacing="-1">Finally Peace</text>
+  <text x="256" y="432" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#7c3aed" font-style="italic">Infinite care. Infinite peace.</text>
+</svg>

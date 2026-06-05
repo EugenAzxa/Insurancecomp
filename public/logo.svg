@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a0533"/>
-      <stop offset="100%" stop-color="#0d1b4b"/>
-    </linearGradient>
     <linearGradient id="inf" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#9333ea"/>
       <stop offset="50%" stop-color="#7c3aed"/>
@@ -12,76 +8,46 @@
     <linearGradient id="feather" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#93c5fd"/>
       <stop offset="50%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#4338ca"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="softglow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
-  <!-- Background circle -->
-  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
-
-  <!-- Infinity symbol -->
-  <g filter="url(#glow)" transform="translate(256,230)">
-    <path d="
-      M-95,0
-      C-95,-52 -52,-85 0,-85
-      C35,-85 62,-68 80,-45
-      C62,-22 35,-5 0,-5
-      C-35,-5 -62,-22 -80,-45
-      C-62,-68 -35,-85 0,-85
-      " fill="none" stroke="url(#inf)" stroke-width="28" stroke-linecap="round" opacity="0"/>
-
-    <!-- Left lobe -->
-    <path d="M0,0 C-20,-45 -60,-70 -100,-55 C-140,-40 -150,10 -130,42 C-110,74 -65,80 -30,60 C-10,48 0,25 0,0 Z
-             M0,0 C-20,45 -60,70 -100,55 C-140,40 -150,-10 -130,-42 C-110,-74 -65,-80 -30,-60 C-10,-48 0,-25 0,0 Z"
-      fill="none" stroke="url(#inf)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" opacity="0"/>
-
-    <!-- Clean infinity using two circles approach -->
-    <ellipse cx="-72" cy="0" rx="68" ry="48" fill="none" stroke="url(#inf)" stroke-width="24" opacity="0.95"/>
-    <ellipse cx="72" cy="0" rx="68" ry="48" fill="none" stroke="url(#inf)" stroke-width="24" opacity="0.95"/>
+  <!-- Infinity symbol (two overlapping ellipses) -->
+  <g transform="translate(148,95)">
+    <ellipse cx="-55" cy="0" rx="52" ry="38" fill="none" stroke="url(#inf)" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="55" cy="0" rx="52" ry="38" fill="none" stroke="url(#inf)" stroke-width="18" stroke-linecap="round"/>
   </g>
 
-  <!-- Feather -->
-  <g filter="url(#softglow)" transform="translate(256,170) rotate(-35)">
+  <!-- Feather overlaid (rotated, centered on infinity) -->
+  <g transform="translate(148,52) rotate(-38, 0, 43)">
     <!-- Shaft -->
-    <line x1="0" y1="-95" x2="0" y2="95" stroke="url(#feather)" stroke-width="4" stroke-linecap="round"/>
-    <!-- Barbs left -->
-    <path d="M0,-70 Q-28,-58 -35,-40" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-    <path d="M0,-50 Q-32,-36 -38,-18" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
-    <path d="M0,-30 Q-34,-16 -38,4" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-    <path d="M0,-10 Q-32,4 -34,24" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-    <path d="M0,10 Q-26,22 -26,42" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
-    <path d="M0,30 Q-18,40 -16,58" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
-    <!-- Barbs right -->
-    <path d="M0,-70 Q28,-58 35,-40" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-    <path d="M0,-50 Q32,-36 38,-18" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
-    <path d="M0,-30 Q34,-16 38,4" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-    <path d="M0,-10 Q32,4 34,24" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-    <path d="M0,10 Q26,22 26,42" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
-    <path d="M0,30 Q18,40 16,58" fill="none" stroke="url(#feather)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <line x1="0" y1="0" x2="0" y2="86" stroke="url(#feather)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Left barbs -->
+    <path d="M0,8  Q-20,16 -26,28"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,22 Q-22,30 -27,44"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0,36 Q-22,44 -25,58"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M0,50 Q-18,57 -19,70"  fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <!-- Right barbs -->
+    <path d="M0,8  Q20,16 26,28"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M0,22 Q22,30 27,44"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M0,36 Q22,44 25,58"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M0,50 Q18,57 19,70"   fill="none" stroke="url(#feather)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
     <!-- Tip -->
-    <path d="M0,-95 Q4,-80 0,-65 Q-4,-80 0,-95" fill="#93c5fd" opacity="0.9"/>
+    <path d="M0,0 Q3,8 0,16 Q-3,8 0,0" fill="#93c5fd" opacity="0.95"/>
   </g>
 
   <!-- Sparkles -->
-  <g fill="#c4b5fd" opacity="0.9">
-    <path d="M130,148 l4,10 l4,-10 l-4,-10 Z" transform="scale(0.8)"/>
-    <path d="M165,142 l2,5 l2,-5 l-2,-5 Z"/>
-    <path d="M340,148 l4,10 l4,-10 l-4,-10 Z" transform="translate(15,0) scale(0.8)"/>
-    <path d="M375,158 l2,5 l2,-5 l-2,-5 Z"/>
-    <path d="M256,148 l3,8 l3,-8 l-3,-8 Z"/>
-    <path d="M200,195 l2,5 l2,-5 l-2,-5 Z" opacity="0.6"/>
-    <path d="M310,192 l2,5 l2,-5 l-2,-5 Z" opacity="0.6"/>
+  <g fill="#a78bfa">
+    <path d="M64,42  l3,7  l3,-7  l-3,-7  Z" opacity="0.8"/>
+    <path d="M78,36  l2,4  l2,-4  l-2,-4  Z" opacity="0.7"/>
+    <path d="M220,42 l3,7  l3,-7  l-3,-7  Z" opacity="0.8"/>
+    <path d="M234,36 l2,4  l2,-4  l-2,-4  Z" opacity="0.7"/>
+    <path d="M148,28 l2.5,6 l2.5,-6 l-2.5,-6 Z" opacity="0.9"/>
+    <path d="M100,68 l1.5,3.5 l1.5,-3.5 l-1.5,-3.5 Z" opacity="0.5"/>
+    <path d="M196,68 l1.5,3.5 l1.5,-3.5 l-1.5,-3.5 Z" opacity="0.5"/>
   </g>
 
-  <!-- FP text -->
-  <text x="256" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="700" fill="white" letter-spacing="-1" opacity="0.95">Finally Peace</text>
-  <text x="256" y="395" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#a78bfa" letter-spacing="1" font-style="italic">Infinite care. Infinite peace.</text>
+  <!-- "Finally Peace" text -->
+  <text x="310" y="82" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#0f172a" letter-spacing="-1">Finally Peace</text>
+  <text x="312" y="115" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#7c3aed" font-style="italic" letter-spacing="0.5">Infinite care. Infinite peace.</text>
 </svg>
