@@ -8,6 +8,9 @@ export default function SubscribePage() {
   const [step, setStep] = useState<Step>(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [postal, setPostal] = useState("");
+  const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -17,7 +20,7 @@ export default function SubscribePage() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: "finally-peace", email, name }),
+        body: JSON.stringify({ plan: "finally-peace", email, name, address, postal, city }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) {
@@ -91,8 +94,22 @@ export default function SubscribePage() {
                 Email address
                 <input className="sub-input" type="email" placeholder="you@email.com" value={email} onChange={e => setEmail(e.target.value)} />
               </label>
+              <label className="sub-label">
+                Street address
+                <input className="sub-input" type="text" placeholder="123 Main St" value={address} onChange={e => setAddress(e.target.value)} />
+              </label>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"12px"}}>
+                <label className="sub-label">
+                  City
+                  <input className="sub-input" type="text" placeholder="Toronto" value={city} onChange={e => setCity(e.target.value)} />
+                </label>
+                <label className="sub-label">
+                  Postal / ZIP code
+                  <input className="sub-input" type="text" placeholder="M5V 2T6" value={postal} onChange={e => setPostal(e.target.value)} />
+                </label>
+              </div>
             </div>
-            <button className="sub-btn" disabled={!name || !email} onClick={() => setStep(2)}>
+            <button className="sub-btn" disabled={!name || !email || !address || !postal} onClick={() => setStep(2)}>
               Continue →
             </button>
             <p className="sub-fine">No spam. We email you once when it&apos;s your turn.</p>
@@ -153,6 +170,12 @@ export default function SubscribePage() {
               </div>
               <div className="sub-summary-row">
                 <span>Plan</span><strong>Finally Peace · $15/mo</strong>
+              </div>
+              <div className="sub-summary-row">
+                <span>Address</span><strong>{address}{city ? ', ' + city : ''}</strong>
+              </div>
+              <div className="sub-summary-row">
+                <span>Postal code</span><strong>{postal}</strong>
               </div>
               <div className="sub-summary-row">
                 <span>Rate</span><strong>Locked at your age today - forever</strong>
