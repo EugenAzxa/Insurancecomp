@@ -76,7 +76,7 @@ export default function SubscribePage() {
 
       <div className="sub-card">
 
-        {/* Step 1 — Who are you */}
+        {/* Step 1 - Who are you */}
         {step === 1 && (
           <>
             <div className="sub-eyebrow">Step 1 of 3</div>
@@ -99,12 +99,12 @@ export default function SubscribePage() {
           </>
         )}
 
-        {/* Step 2 — The plan */}
+        {/* Step 2 - The plan */}
         {step === 2 && (
           <>
             <div className="sub-eyebrow">Step 2 of 3</div>
             <h1 className="sub-title">One plan. Everything included.</h1>
-            <p className="sub-sub">Rate locked at your age today — forever.</p>
+            <p className="sub-sub">Rate locked at your age today - forever.</p>
 
             <div className="sub-plan-card">
               <div className="sub-plan-badge">FINALLY PEACE SUBSCRIPTION</div>
@@ -115,12 +115,12 @@ export default function SubscribePage() {
               </div>
               <div className="sub-plan-features">
                 {[
-                  "Funeral — your way (cremation, burial, aquamation)",
+                  "Funeral - your way (cremation, burial, aquamation)",
                   "Attorney-prepared will + estate paperwork",
                   "$15,000 family runway + debt navigation",
                   "Body transport worldwide + repatriation",
                   "Live-streamed memorial + 2 obituaries",
-                  "24/7 dedicated concierge — one call handles all",
+                  "24/7 dedicated concierge - one call handles all",
                 ].map(f => (
                   <div key={f} className="sub-feature">
                     <span className="sub-check">✓</span> {f}
@@ -137,12 +137,12 @@ export default function SubscribePage() {
           </>
         )}
 
-        {/* Step 3 — Confirm */}
+        {/* Step 3 - Confirm */}
         {step === 3 && (
           <>
             <div className="sub-eyebrow">Step 3 of 3</div>
             <h1 className="sub-title">Confirm &amp; start</h1>
-            <p className="sub-sub">Review your details then hit start — takes 30 seconds.</p>
+            <p className="sub-sub">Review your details then hit start - takes 30 seconds.</p>
 
             <div className="sub-summary">
               <div className="sub-summary-row">
@@ -155,7 +155,7 @@ export default function SubscribePage() {
                 <span>Plan</span><strong>Finally Peace · $15/mo</strong>
               </div>
               <div className="sub-summary-row">
-                <span>Rate</span><strong>Locked at your age today — forever</strong>
+                <span>Rate</span><strong>Locked at your age today - forever</strong>
               </div>
             </div>
 

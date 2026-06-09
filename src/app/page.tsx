@@ -152,7 +152,7 @@ export default function Home() {
               Open the app
             </a>
           </div>
-          {/* Hamburger button — mobile only */}
+          {/* Hamburger button - mobile only */}
           <button className="nav-burger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
             {menuOpen ? (
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -191,7 +191,7 @@ export default function Home() {
               </h1>
               <p className="hero-sub">
                 End-of-life coverage, rebuilt as one simple subscription.
-                Funeral, legal, debt, transportation — all included. So your
+                Funeral, legal, debt, transportation - all included. So your
                 family never has to plan a funeral on the worst week of their
                 life.
               </p>
@@ -227,7 +227,7 @@ export default function Home() {
                 cash. I never want my kids to feel that.&quot;
               </div>
               <div className="quote-attr">
-                — What every Finally Peace member eventually tells us.
+                - What every Finally Peace member eventually tells us.
               </div>
             </div>
           </div>
@@ -302,12 +302,12 @@ export default function Home() {
               Death is a <span className="serif">financial emergency.</span>
             </h2>
             <p className="section-sub">
-              Coverage exists — but it&apos;s built for your grandparents, not you.
+              Coverage exists - but it&apos;s built for your grandparents, not you.
             </p>
           </div>
           <div className="problem-cards">
             <div className="problem-card">
-              <h3>Funerals cost $9K–$15K — due in days.</h3>
+              <h3>Funerals cost $9K–$15K - due in days.</h3>
               <p>Most families aren&apos;t prepared. Many go into debt or crowdfund grief.</p>
             </div>
             <div className="problem-card">
@@ -315,7 +315,7 @@ export default function Home() {
               <p>Door-to-door agents, paper forms, opaque pricing. Not built for your generation.</p>
             </div>
             <div className="problem-card">
-              <h3>Your family handles everything — while grieving.</h3>
+              <h3>Your family handles everything - while grieving.</h3>
               <p>Casket, transport, debt, the apartment, the estate. All on the worst week of their life.</p>
             </div>
             <div className="problem-card">
@@ -362,8 +362,8 @@ export default function Home() {
               </svg>
               <h3>Funeral, your way</h3>
               <p>
-                Cremation, traditional burial, green burial, or aquamation —
-                your choice. Casket, transport, service, paperwork — all
+                Cremation, traditional burial, green burial, or aquamation -
+                your choice. Casket, transport, service, paperwork - all
                 included.
               </p>
             </div>
@@ -411,7 +411,7 @@ export default function Home() {
               <h3>Debt navigation</h3>
               <p>
                 Your family is connected to specialists who restructure,
-                negotiate, and reorganize outstanding obligations — so
+                negotiate, and reorganize outstanding obligations - so
                 they&apos;re never standing alone against a creditor.
               </p>
             </div>
@@ -445,7 +445,7 @@ export default function Home() {
             All of this. <strong>$15 a month.</strong> Cancel anytime.
             <br />
             <em>
-              One good thing you did for your family — long before they ever
+              One good thing you did for your family - long before they ever
               needed it.
             </em>
           </div>
@@ -503,7 +503,7 @@ export default function Home() {
                 <span className="single-plan-period">/month</span>
               </div>
               <div className="single-plan-tagline">
-                Everything below. Cancel anytime. Locked at signup age — for
+                Everything below. Cancel anytime. Locked at signup age - for
                 life.
               </div>
 
@@ -515,7 +515,7 @@ export default function Home() {
                       Choice of cremation, traditional burial, green burial, or
                       aquamation
                     </li>
-                    <li>Casket or urn — three styles per type</li>
+                    <li>Casket or urn - three styles per type</li>
                     <li>Full service OR direct cremation</li>
                     <li>Live-streamed memorial for distant relatives</li>
                     <li>Obituary in 2 publications</li>
@@ -569,7 +569,7 @@ export default function Home() {
               </button>
 
               <div className="single-plan-note">
-                Rate locked at your signup age — never increases. No medical
+                Rate locked at your signup age - never increases. No medical
                 exam. Cancel anytime.
               </div>
             </div>
@@ -577,7 +577,7 @@ export default function Home() {
 
           <div className="pricing-note">
             <strong>About pricing.</strong> Headline prices apply ages 18–40.
-            Above 40, premiums step up by age band — your final rate is set by
+            Above 40, premiums step up by age band - your final rate is set by
             our licensed carrier after a 60-second underwriting questionnaire.
             Family bundle: 10% off when two adults in your household subscribe.
             Lock your current rate for life with a single 12-month upfront
@@ -592,7 +592,7 @@ export default function Home() {
               </h2>
               <p className="section-sub" style={{ fontSize: "16px" }}>
                 Whatever your beliefs, your end-of-life wishes are honoured exactly as
-                you choose — cremation, burial, aquamation, or any faith-specific tradition.
+                you choose - cremation, burial, aquamation, or any faith-specific tradition.
               </p>
             </div>
             <ReligionOrbit />
@@ -639,7 +639,7 @@ export default function Home() {
                 <span className="ic-x">×</span>2–4 weeks
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>Minutes — simplified-issue,
+                <span className="ic-check">✓</span>Minutes - simplified-issue,
                 no exam
               </div>
             </div>
@@ -650,7 +650,7 @@ export default function Home() {
                 <span className="ic-x">×</span>&quot;Call for a quote&quot;
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>One price, $15/mo — no hidden
+                <span className="ic-check">✓</span>One price, $15/mo - no hidden
                 fees
               </div>
             </div>
@@ -658,7 +658,7 @@ export default function Home() {
             <div className="compare-row">
               <div className="col-label">When you die, who handles it</div>
               <div className="col-old">
-                <span className="ic-x">×</span>Your family — alone, on the worst
+                <span className="ic-x">×</span>Your family - alone, on the worst
                 week of their life
               </div>
               <div className="col-atlas">
@@ -701,7 +701,7 @@ export default function Home() {
             </h2>
             <p className="section-sub">
               From signup to a real, licensed coverage plan in your name
-              — without a single phone call.
+              - without a single phone call.
             </p>
           </div>
           <div className="steps">
@@ -724,7 +724,7 @@ export default function Home() {
               <div className="step-num">3</div>
               <h3>Your future is secured</h3>
               <p>
-                We&apos;re here when needed. Until then — live your life.
+                We&apos;re here when needed. Until then - live your life.
               </p>
             </div>
           </div>
@@ -740,7 +740,7 @@ export default function Home() {
               Real coverage. <span className="serif">Real service.</span>
             </h2>
             <p className="section-sub">
-              Built differently from the inside out — but with a 90-year-old
+              Built differently from the inside out - but with a 90-year-old
               product underneath.
             </p>
           </div>
@@ -768,7 +768,7 @@ export default function Home() {
               <h3>Built for who you are now</h3>
               <p>
                 Final-expense coverage has been sold the same way for 50 years
-                — door-to-door agents and senior TV ads. Finally Peace is the first
+                - door-to-door agents and senior TV ads. Finally Peace is the first
                 version made for someone who buys things on their phone.
               </p>
             </div>
@@ -786,7 +786,7 @@ export default function Home() {
               <span className="serif">stopped avoiding it.</span>
             </h2>
             <p className="section-sub">
-              Early Finally Peace members. Real conversations from our beta — names
+              Early Finally Peace members. Real conversations from our beta - names
               changed where requested.
             </p>
           </div>
@@ -795,7 +795,7 @@ export default function Home() {
               <div className="voice-stars">★ ★ ★ ★ ★</div>
               <div className="voice-quote">
                 &quot;I&apos;d been putting this off for four years. Finally Peace
-                took twelve minutes. I cried a little after I hit submit — not
+                took twelve minutes. I cried a little after I hit submit - not
                 because it was sad, just because it was finally done.&quot;
               </div>
               <div className="voice-author">
@@ -919,8 +919,8 @@ export default function Home() {
                 Real coverage. Every Finally Peace subscription includes a
                 licensed coverage plan in your name, issued by a
                 reputable licensed carrier. The subscription wraps the policy
-                with our service layer — funeral arrangements, repatriation,
-                concierge, AI memorial — but the underlying product is regulated
+                with our service layer - funeral arrangements, repatriation,
+                concierge, AI memorial - but the underlying product is regulated
                 final-expense coverage.
               </div>
             </details>
@@ -958,7 +958,7 @@ export default function Home() {
               <div className="faq-a">
                 During your time as a subscriber, you can record memories,
                 stories, and answers to prompts. We use that material to build a
-                private, family-accessible AI avatar — so your grandchildren can
+                private, family-accessible AI avatar - so your grandchildren can
                 hear your voice and your stories long after you&apos;re gone.
                 Optional and fully under your control.
               </div>
@@ -970,7 +970,7 @@ export default function Home() {
               </summary>
               <div className="faq-a">
                 Finally Peace requires you to be cognitively healthy at the time you
-                enroll — this is standard for any final-expense coverage
+                enroll - this is standard for any final-expense coverage
                 product. The 5-question health quiz at signup includes a brief
                 cognitive screen.
               </div>
@@ -979,7 +979,7 @@ export default function Home() {
               <summary className="faq-q">From what age can I sign up?</summary>
               <div className="faq-a">
                 Finally Peace is available from age 18 to 75. Sign up takes 8
-                minutes on your phone — no medical exam, just a 5-question health
+                minutes on your phone - no medical exam, just a 5-question health
                 questionnaire.
               </div>
             </details>
@@ -999,11 +999,11 @@ export default function Home() {
                 If I sign up young, does my price go up as I age?
               </summary>
               <div className="faq-a">
-                No. Your rate band is set at signup and frozen for life — even
+                No. Your rate band is set at signup and frozen for life - even
                 when you cross into a higher age band years later. A 32-year-old
                 who signs up today will pay the 32-year-old rate at 65. This is
                 the single biggest reason to start now: the carrier locks your
-                rate at today&apos;s age — forever.
+                rate at today&apos;s age - forever.
               </div>
             </details>
           </div>
@@ -1022,13 +1022,13 @@ export default function Home() {
               <p className="getapp-sub">
                 Install the Finally Peace app on your phone or desktop in one tap.
                 Manage your subscription, store your wishes, and give your family
-                one number to call — all from your home screen.
+                one number to call - all from your home screen.
               </p>
               <ul className="getapp-features">
-                <li>Installs straight to your home screen — no app store</li>
+                <li>Installs straight to your home screen - no app store</li>
                 <li>Opens full-screen, like a native app</li>
                 <li>Works on iPhone, Android, and desktop</li>
-                <li>Always up to date — nothing to update manually</li>
+                <li>Always up to date - nothing to update manually</li>
               </ul>
               <InstallApp />
               <a href="/app" className="getapp-open-link">
@@ -1072,7 +1072,7 @@ export default function Home() {
             </button>
           </form>
           <div className="cta-trust" style={{ marginBottom: "16px" }}>
-            No spam. We email you twice — once when we launch, once if you ask.
+            No spam. We email you twice - once when we launch, once if you ask.
           </div>
           <WaitlistCounter />
         </div>

@@ -166,7 +166,7 @@ function OverviewTab({ data, onData }: { data: AppData; onData: (d: AppData) => 
         <div className="dash-stat-sep" />
         <div className="dash-stat">
           <div className="dash-stat-ico"><IcoPeople /></div>
-          <div className="dash-stat-val">{data.beneficiary.name || "—"}</div>
+          <div className="dash-stat-val">{data.beneficiary.name || "-"}</div>
           <div className="dash-stat-lbl">Beneficiary</div>
         </div>
       </div>
@@ -229,7 +229,7 @@ function WishesTab({ wishes, onChange }: { wishes: Wishes; onChange: (p: Partial
         <div className="dash-card-head">
           <span className="dash-card-title">How would you like to be remembered?</span>
         </div>
-        <p className="dash-sub-text">Your choice is honoured exactly — regardless of faith or tradition.</p>
+        <p className="dash-sub-text">Your choice is honoured exactly - regardless of faith or tradition.</p>
         <div className="dash-burial-grid">
           {options.map((o) => (
             <button
@@ -296,7 +296,7 @@ function WishesTab({ wishes, onChange }: { wishes: Wishes; onChange: (p: Partial
 ────────────────────────────────────────────────────────── */
 function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void }) {
   const coverage = [
-    { key: "funeral",   label: "Funeral — your way",  note: "Cremation, burial, service, paperwork" },
+    { key: "funeral",   label: "Funeral - your way",  note: "Cremation, burial, service, paperwork" },
     { key: "legal",     label: "Legal help",           note: "Will, POA, estate paperwork" },
     { key: "debt",      label: "Debt navigation",      note: "$15,000 family runway + specialists" },
     { key: "transport", label: "Transportation",       note: "Worldwide + international repatriation" },
