@@ -219,6 +219,8 @@ body { font-family: var(--qw-sans) !important; }
     line-height: 1.5;
   }
   .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  /* Waitlist CTA in hero — hidden on desktop (nav has it), shown on mobile */
+  .hero-waitlist-btn { display: none; }
   .hero-trust {
     display: flex; gap: 28px; margin-top: 56px; flex-wrap: wrap;
     color: var(--slate-500); font-size: 13px; align-items: center;
@@ -1849,6 +1851,18 @@ body { font-family: var(--qw-sans) !important; }
 
 /* ============ MOBILE CLEANUP PASS ============ */
 @media (max-width: 480px) {
+  /* Hero waitlist button — full width on mobile */
+  .hero-waitlist-btn {
+    display: block !important;
+    width: 100%;
+    margin-top: 14px;
+    padding: 16px;
+    background: #2563eb; color: #fff !important;
+    text-align: center; text-decoration: none;
+    border-radius: 14px; font-size: 17px; font-weight: 700;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+  }
+
   /* Nav: only show Join button, float Open the app to bottom-right */
   .nav-links { gap: 8px; }
   .btn-primary { padding: 10px 14px !important; font-size: 13px !important; }

@@ -203,6 +203,9 @@ export default function Home() {
                   How it works
                 </a>
               </div>
+              <a href="/subscribe" className="hero-waitlist-btn">
+                Join the waitlist →
+              </a>
               <div className="hero-trust">
                 <span>
                   <span className="check">✓</span>&nbsp; Underwritten by a
