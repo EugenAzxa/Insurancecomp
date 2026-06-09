@@ -1858,16 +1858,15 @@ body { font-family: var(--qw-sans) !important; }
 
 /* ============ MOBILE CLEANUP PASS ============ */
 @media (max-width: 480px) {
-  /* Hero waitlist button — full width on mobile */
+  /* Hero waitlist button — same size as other hero buttons on mobile */
   .hero-waitlist-btn {
-    display: block !important;
-    width: 100%;
-    margin-top: 14px;
-    padding: 16px;
+    display: inline-flex !important;
+    align-items: center; justify-content: center;
+    padding: 14px 24px;
     background: #2563eb; color: #fff !important;
-    text-align: center; text-decoration: none;
-    border-radius: 14px; font-size: 17px; font-weight: 700;
-    box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+    text-decoration: none;
+    border-radius: 12px; font-size: 16px; font-weight: 700;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.3);
   }
 
   /* Support button sits at the very bottom on mobile */
