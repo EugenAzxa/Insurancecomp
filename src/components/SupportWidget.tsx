@@ -16,6 +16,7 @@ const SUGGESTED = [
 
 export default function SupportWidget() {
   const [open, setOpen] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -174,21 +175,30 @@ export default function SupportWidget() {
         </div>
       )}
 
-      {/* Floating toggle button */}
-      <button
-        className={`sw-fab ${open ? "sw-fab-open" : ""}`}
-        onClick={() => setOpen((o) => !o)}
-        aria-label={open ? "Close support" : "Open support"}
-      >
-        {open ? (
-          <span className="sw-fab-icon">&times;</span>
-        ) : (
-          <>
-            <svg className="sw-fab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span className="sw-fab-label">Support</span>
-          </>
-        )}
-      </button>
+      {/* Floating button + dismiss X */}
+      {!dismissed && (
+        <div className="sw-fab-wrap">
+          <button
+            className={`sw-fab ${open ? "sw-fab-open" : ""}`}
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? "Close support" : "Open support"}
+          >
+            {open ? (
+              <span className="sw-fab-icon">&times;</span>
+            ) : (
+              <>
+                <svg className="sw-fab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span className="sw-fab-label">Support</span>
+              </>
+            )}
+          </button>
+          {!open && (
+            <button className="sw-dismiss" onClick={() => setDismissed(true)} aria-label="Dismiss">
+              ×
+            </button>
+          )}
+        </div>
+      )}
     </>
   );
 }
