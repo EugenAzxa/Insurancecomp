@@ -6,8 +6,7 @@ type Step = 1 | 2 | 3;
 
 export default function SubscribePage() {
   const [step, setStep] = useState<Step>(1);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [fullName, setFullName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState<"male"|"female"|"">("");
   const [phone, setPhone] = useState("");
@@ -24,7 +23,7 @@ export default function SubscribePage() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: "finally-peace", email, name: firstName + " " + lastName, firstName, lastName, age, phone, address, postal, city }),
+        body: JSON.stringify({ plan: "finally-peace", email, name: fullName, age, gender, phone, address, postal, city }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) {
@@ -90,16 +89,10 @@ export default function SubscribePage() {
             <h1 className="sub-title">Let&apos;s get started</h1>
             <p className="sub-sub">No medical exam. No agent visit. Just you and 3 quick steps.</p>
             <div className="sub-fields">
-              <div className="sub-row-2">
-                <label className="sub-label">
-                  First name
-                  <input className="sub-input" type="text" placeholder="Sarah" value={firstName} onChange={e => setFirstName(e.target.value)} autoFocus />
-                </label>
-                <label className="sub-label">
-                  Last name
-                  <input className="sub-input" type="text" placeholder="Smith" value={lastName} onChange={e => setLastName(e.target.value)} />
-                </label>
-              </div>
+              <label className="sub-label">
+                Full name
+                <input className="sub-input" type="text" placeholder="Sarah Smith" value={fullName} onChange={e => setFullName(e.target.value)} autoFocus />
+              </label>
               <div className="sub-row-2">
                 <label className="sub-label">
                   Age
@@ -140,7 +133,7 @@ export default function SubscribePage() {
                 </label>
               </div>
             </div>
-            <button className="sub-btn" disabled={!firstName || !lastName || !age || !gender || !email || !address || !postal} onClick={() => setStep(2)}>
+            <button className="sub-btn" disabled={!fullName || !age || !gender || !email || !address || !postal} onClick={() => setStep(2)}>
               Continue →
             </button>
             <p className="sub-fine">No spam. We email you once when it&apos;s your turn.</p>
@@ -194,7 +187,7 @@ export default function SubscribePage() {
 
             <div className="sub-summary">
               <div className="sub-summary-row">
-                <span>Name</span><strong>{firstName} {lastName}</strong>
+                <span>Name</span><strong>{fullName}</strong>
               </div>
               <div className="sub-summary-row">
                 <span>Age</span><strong>{age}</strong>
