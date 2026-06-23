@@ -50,6 +50,23 @@ const DEVICES = [
   { label: "Tablet", pct: 6, color: "#bfdbfe" },
 ];
 
+/* Age distribution — 25–45 makes up ~75% */
+const AGES = [
+  { range: "18–25", pct: 9,  core: false },
+  { range: "25–35", pct: 42, core: true  },
+  { range: "35–45", pct: 33, core: true  },
+  { range: "45–55", pct: 9,  core: false },
+  { range: "55–65", pct: 5,  core: false },
+  { range: "65+",   pct: 2,  core: false },
+];
+const CORE_AGE_PCT = 75; // 25–45
+
+const GENDERS = [
+  { label: "Female", pct: 54, color: "#ec4899" },
+  { label: "Male", pct: 44, color: "#2563eb" },
+  { label: "Other", pct: 2, color: "#a78bfa" },
+];
+
 /* Click hotspots positioned over the real site screenshot (x/y in %) */
 const HOTSPOTS = [
   { x: 69, y: 4,  r: 74, delay: 0,   ping: true  }, // Join the waitlist (nav)
@@ -267,6 +284,64 @@ export default function StatsPage() {
             {DEVICES.map(d => (
               <span key={d.label}><i style={{ background: d.color }} /> {d.label} <strong>{d.pct}%</strong></span>
             ))}
+          </div>
+        </div>
+
+        <div className="st-grid-2">
+          {/* Age distribution */}
+          <div className="st-card">
+            <div className="st-card-head">
+              <h2>Age distribution</h2>
+              <span className="st-card-sub">{CORE_AGE_PCT}% are 25–45</span>
+            </div>
+            <ul className="st-age-list">
+              {AGES.map(a => {
+                const max = Math.max(...AGES.map(x => x.pct));
+                return (
+                  <li key={a.range} className={a.core ? "core" : ""}>
+                    <span className="st-age-range">{a.range}</span>
+                    <span className="st-age-bar"><span style={{ width: `${(a.pct / max) * 100}%` }} /></span>
+                    <span className="st-age-pct">{a.pct}%</span>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="st-age-note">
+              <span className="st-age-dot" /> Core audience · ages 25–45
+            </div>
+          </div>
+
+          {/* Gender */}
+          <div className="st-card">
+            <div className="st-card-head"><h2>Gender</h2></div>
+            <div className="st-gender-donut">
+              <svg viewBox="0 0 42 42" className="st-donut-svg">
+                {(() => {
+                  let offset = 25; // start at top
+                  return GENDERS.map(g => {
+                    const dash = `${g.pct} ${100 - g.pct}`;
+                    const el = (
+                      <circle key={g.label}
+                        cx="21" cy="21" r="15.915"
+                        fill="none" stroke={g.color} strokeWidth="6"
+                        strokeDasharray={dash} strokeDashoffset={offset}
+                      />
+                    );
+                    offset -= g.pct;
+                    return el;
+                  });
+                })()}
+              </svg>
+              <div className="st-donut-center">
+                <strong>{GENDERS[0].pct}%</strong>
+                <span>Female</span>
+              </div>
+            </div>
+            <div className="st-gender-legend">
+              {GENDERS.map(g => (
+                <span key={g.label}><i style={{ background: g.color }} /> {g.label} <strong>{g.pct}%</strong></span>
+              ))}
+            </div>
           </div>
         </div>
 
