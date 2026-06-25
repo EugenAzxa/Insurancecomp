@@ -11,7 +11,7 @@ function cannedReply(q: string): string {
   if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
     return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
-    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal documents (will, POA, estate paperwork), body transportation worldwide including international repatriation, and a secure profile where you customize and save every choice.";
+    return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal preferences (will, POA, estate paperwork), body transportation worldwide including international repatriation, and a secure profile where you customize and save every choice.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
     return "There's a 12-month minimum commitment, then you can cancel anytime. Your coverage simply lapses if you stop paying — no penalties.";
   if (/wait|period|when.*cover|24 month|day 1|immediate|instant/i.test(t))
@@ -25,9 +25,9 @@ function cannedReply(q: string): string {
   if (/funeral|cremation|burial|casket|service|ceremony/i.test(t))
     return "Your subscription covers the full funeral: cremation, traditional burial, green burial, or aquamation — your choice. Casket or urn, live-streamed memorial, obituary in 2 publications, and 10 certified death certificates are all included.";
   if (/legal|will|poa|estate|power of attorney|probate/i.test(t))
-    return "Legal help is fully included: an attorney-prepared will, power of attorney, advance directive, estate paperwork & probate guidance, digital legacy management, and family beneficiary setup.";
+    return "Legal preferences are fully included: an attorney-prepared will, power of attorney, advance directive, estate paperwork & probate guidance, digital legacy management, and family beneficiary setup.";
   if (/profile|customi[sz]e|save|wishes|preferences|secure|account/i.test(t))
-    return "Your secure profile is where you customize and save every choice — your funeral preferences, transportation, and legal documents — all private, encrypted, and ready the moment your family needs them.";
+    return "Your secure profile is where you customize and save every choice — your funeral preferences, transportation, and legal preferences — all private, encrypted, and ready the moment your family needs them.";
   if (/transport|repatri|abroad|travel|body|move|ship/i.test(t))
     return "Body transport is included worldwide. If you pass abroad, international repatriation is covered. Family travel for 2 distant relatives and pall-bearer arrangement are also included.";
   if (/app|dashboard|download|install|phone|home screen|pwa/i.test(t))
@@ -56,7 +56,7 @@ About Finally Peace:
 What's included in the $15/month subscription:
 FUNERAL: Choice of cremation, traditional burial, green burial, or aquamation. Casket or urn (3 styles per type). Full service OR direct cremation. Live-streamed memorial. Obituary in 2 publications. 10 certified death certificates.
 LEGAL: Attorney-prepared will. Power of attorney + advance directive. Estate paperwork & probate guidance. Digital legacy management. Family beneficiary setup.
-SECURE PROFILE: Customize your funeral your way. Save transportation preferences. Store legal documents securely. Private & encrypted on your account. Ready the moment family needs it.
+SECURE PROFILE: Customize your funeral your way. Save transportation preferences. Store legal preferences securely. Private & encrypted on your account. Ready the moment family needs it.
 TRANSPORT: Body transport worldwide. International repatriation if you die abroad. Family travel for 2 distant relatives. Pall-bearer arrangement. Burial plot or scattering location coordination.
 
 Key facts:

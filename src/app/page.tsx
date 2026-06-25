@@ -385,7 +385,7 @@ export default function Home() {
                 <line x1="7" y1="16" x2="14" y2="16" />
                 <line x1="7" y1="10" x2="11" y2="10" />
               </svg>
-              <h3>Legal help</h3>
+              <h3>Legal preferences</h3>
               <p>
                 Attorney-prepared will, estate paperwork, power of attorney,
                 advance directives. Your family doesn&apos;t open a lawyer&apos;s
@@ -410,7 +410,7 @@ export default function Home() {
               <h3>Your secure profile</h3>
               <p>
                 Customize and save every choice in one private profile - your
-                funeral, transportation, and legal documents, ready the moment
+                funeral, transportation, and legal preferences, ready the moment
                 your family needs them.
               </p>
             </div>
@@ -538,7 +538,7 @@ export default function Home() {
                   <ul className="single-plan-list">
                     <li>Customize your funeral, your way</li>
                     <li>Save transportation preferences</li>
-                    <li>Store legal documents securely</li>
+                    <li>Store legal preferences securely</li>
                     <li>Private &amp; encrypted on your account</li>
                     <li>Ready the moment family needs it</li>
                   </ul>

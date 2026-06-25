@@ -297,7 +297,7 @@ function WishesTab({ wishes, onChange }: { wishes: Wishes; onChange: (p: Partial
 function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void }) {
   const coverage = [
     { key: "funeral",   label: "Funeral - your way",  note: "Cremation, burial, service, paperwork" },
-    { key: "legal",     label: "Legal documents",      note: "Will, POA, estate paperwork" },
+    { key: "legal",     label: "Legal preferences",      note: "Will, POA, estate paperwork" },
     { key: "profile",   label: "Your secure profile",  note: "Customize & save every choice" },
     { key: "transport", label: "Transportation",       note: "Worldwide + international repatriation" },
   ];
