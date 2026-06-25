@@ -693,7 +693,7 @@ export default function Home() {
               <div className="step-num">2</div>
               <h3>Quick quiz</h3>
               <p>
-                5 health questions. No medical exam. Simply covered.
+                5 health questions. No medical exam.
               </p>
             </div>
             <div className="step">
