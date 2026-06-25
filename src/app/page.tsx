@@ -679,10 +679,6 @@ export default function Home() {
             <h2 className="section-title">
               Three steps. <span className="serif">Done in minutes.</span>
             </h2>
-            <p className="section-sub">
-              From signup to a real, licensed coverage plan in your name
-              - without a single phone call.
-            </p>
           </div>
           <div className="steps">
             <div className="step">
