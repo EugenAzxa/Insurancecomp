@@ -308,7 +308,7 @@ function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void
   return (
     <div className="dash-cards">
       <div className="dash-card dash-plan-hero">
-        <div className="dash-plan-badge">QUIETWORLD SUBSCRIPTION</div>
+        <div className="dash-plan-badge">MEMBERSHIP SUBSCRIPTION</div>
         <div className="dash-plan-price">
           <span className="cur">$</span><span className="num">15</span><span className="per">/mo</span>
         </div>

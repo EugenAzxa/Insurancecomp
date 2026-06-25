@@ -219,7 +219,7 @@ export default function SubscribePage() {
             <p className="sub-sub">Rate locked at your age today - forever.</p>
 
             <div className="sub-plan-card">
-              <div className="sub-plan-badge">FINALLY PEACE SUBSCRIPTION</div>
+              <div className="sub-plan-badge">MEMBERSHIP SUBSCRIPTION</div>
               <div className="sub-plan-price">
                 <span className="sub-cur">$</span>
                 <span className="sub-amt">15</span>

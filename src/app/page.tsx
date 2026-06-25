@@ -492,7 +492,7 @@ export default function Home() {
 
           <div className="single-plan-wrap">
             <div className="single-plan">
-              <div className="single-plan-badge">QUIETWORLD SUBSCRIPTION</div>
+              <div className="single-plan-badge">MEMBERSHIP SUBSCRIPTION</div>
               <div className="single-plan-price">
                 <span className="single-plan-currency">$</span>
                 <span className="single-plan-amount">15</span>
@@ -725,7 +725,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ WHY QUIETWORLD ============ */}
+      {/* ============ WHY FINALLY PEACE ============ */}
       <section id="why">
         <div className="container">
           <div className="section-head-center">
