@@ -360,8 +360,8 @@ export default function Home() {
               <h3>Funeral, your way</h3>
               <p>
                 Cremation, traditional burial, green burial, or aquamation -
-                your choice. Casket, transport, service, paperwork - all
-                included.
+                your choice. Every detail and document saved securely, ready
+                the moment your family needs it.
               </p>
             </div>
 
