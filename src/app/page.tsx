@@ -643,7 +643,7 @@ export default function Home() {
                 week of their life
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>One Finally Peace concierge,
+                <span className="ic-check">✓</span>Finally Peace navigates it all,
                 end-to-end
               </div>
             </div>
