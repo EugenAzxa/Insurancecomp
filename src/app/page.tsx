@@ -145,6 +145,7 @@ export default function Home() {
             <a href="#easy">What you get</a>
             <a href="#plans">The plan</a>
             <a href="#how">How it works</a>
+            <a href="/blog">Blog</a>
             <a href="#faq">FAQ</a>
             <a href="/subscribe" className="btn btn-primary" style={{padding:"10px 20px",fontSize:"14px"}}>Join the waitlist →</a>
             <a href="/app" className="btn btn-nav">
@@ -167,6 +168,7 @@ export default function Home() {
             <a href="#easy">What you get</a>
             <a href="#plans">The plan</a>
             <a href="#how">How it works</a>
+            <a href="/blog">Blog</a>
             <a href="#faq">FAQ</a>
             <a href="/subscribe" className="btn btn-primary" style={{width:"100%",justifyContent:"center"}}>Join the waitlist →</a>
             <a href="/app" className="btn btn-nav" style={{width:"100%",justifyContent:"center"}}>
