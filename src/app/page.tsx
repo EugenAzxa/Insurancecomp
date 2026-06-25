@@ -210,10 +210,6 @@ export default function Home() {
               </a>
               <div className="hero-trust">
                 <span>
-                  <span className="check">✓</span>&nbsp; Underwritten by a
-                  world-class licensed carrier
-                </span>
-                <span>
                   <span className="check">✓</span>&nbsp; Cancel anytime
                 </span>
                 <span>
@@ -239,7 +235,7 @@ export default function Home() {
       <section className="trust-strip">
         <div className="container">
           <div className="trust-label">
-            <span className="dot"></span>Partnered with world-class carriers<span className="dot"></span>
+            <span className="dot"></span>World-class partnerships<span className="dot"></span>
           </div>
           <div className="trust-logos">
             <div className="trust-logo">
