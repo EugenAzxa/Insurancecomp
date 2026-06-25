@@ -384,9 +384,9 @@ export default function Home() {
               </svg>
               <h3>Legal preferences</h3>
               <p>
-                Attorney-prepared will, estate paperwork, power of attorney,
-                advance directives. Your family doesn&apos;t open a lawyer&apos;s
-                office while grieving.
+                Connect with our partner attorneys to prepare your will, estate
+                paperwork, power of attorney, and advance directives - drafted
+                by licensed lawyers, not us, and saved safely in your profile.
               </p>
             </div>
 
