@@ -216,7 +216,7 @@ export default function SubscribePage() {
           <>
             <div className="sub-eyebrow">Step 2 of 3</div>
             <h1 className="sub-title">One plan. Everything included.</h1>
-            <p className="sub-sub">Rate locked at your age today - forever.</p>
+            <p className="sub-sub">One flat price. No medical exam. Cancel anytime.</p>
 
             <div className="sub-plan-card">
               <div className="sub-plan-badge">MEMBERSHIP SUBSCRIPTION</div>
@@ -239,7 +239,7 @@ export default function SubscribePage() {
                   </div>
                 ))}
               </div>
-              <div className="sub-plan-note">No medical exam · Cancel anytime · Rate locked for life</div>
+              <div className="sub-plan-note">No medical exam · Cancel anytime · One flat price</div>
             </div>
 
             <div className="sub-btn-row">
@@ -282,7 +282,7 @@ export default function SubscribePage() {
                 <span>Country</span><strong>{country}</strong>
               </div>
               <div className="sub-summary-row">
-                <span>Rate</span><strong>Locked at your age today - forever</strong>
+                <span>Price</span><strong>$15/month · cancel anytime</strong>
               </div>
             </div>
 
@@ -292,7 +292,7 @@ export default function SubscribePage() {
             <div className="sub-btn-row" style={{marginTop:"12px"}}>
               <button className="sub-btn-ghost" onClick={() => setStep(2)}>← Back</button>
             </div>
-            <p className="sub-fine">You&apos;ll be redirected to our secure payment page. Your rate is locked the moment you subscribe.</p>
+            <p className="sub-fine">You&apos;ll be redirected to our secure payment page to complete your membership.</p>
           </>
         )}
 
@@ -301,7 +301,7 @@ export default function SubscribePage() {
       <div className="sub-trust">
         <span>✓ No medical exam</span>
         <span>✓ Cancel anytime</span>
-        <span>✓ Rate locked for life</span>
+        <span>✓ One flat price</span>
       </div>
     </div>
   );

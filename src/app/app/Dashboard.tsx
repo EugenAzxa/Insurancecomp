@@ -154,8 +154,8 @@ function OverviewTab({ data, onData }: { data: AppData; onData: (d: AppData) => 
       <div className="dash-card dash-stats-row">
         <div className="dash-stat">
           <div className="dash-stat-ico"><IcoShield /></div>
-          <div className="dash-stat-val">Locked</div>
-          <div className="dash-stat-lbl">Rate for life</div>
+          <div className="dash-stat-val">$15</div>
+          <div className="dash-stat-lbl">Flat monthly price</div>
         </div>
         <div className="dash-stat-sep" />
         <div className="dash-stat">
@@ -312,7 +312,7 @@ function PlanTab({ data, onData }: { data: AppData; onData: (d: AppData) => void
         <div className="dash-plan-price">
           <span className="cur">$</span><span className="num">15</span><span className="per">/mo</span>
         </div>
-        <div className="dash-plan-status"><span className="dash-dot" /> Active · rate locked for life</div>
+        <div className="dash-plan-status"><span className="dash-dot" /> Active membership</div>
         <div className="dash-plan-next">Next payment: 1st of next month</div>
       </div>
 

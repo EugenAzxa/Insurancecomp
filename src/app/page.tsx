@@ -499,8 +499,7 @@ export default function Home() {
                 <span className="single-plan-period">/month</span>
               </div>
               <div className="single-plan-tagline">
-                Everything below. Cancel anytime. Locked at signup age - for
-                life.
+                Everything below. One flat price. Cancel anytime.
               </div>
 
               <div className="single-plan-grid">
@@ -564,8 +563,7 @@ export default function Home() {
               </button>
 
               <div className="single-plan-note">
-                Rate locked at your signup age - never increases. No medical
-                exam. Cancel anytime.
+                One flat price. No medical exam. Cancel anytime.
               </div>
             </div>
           </div>
@@ -983,8 +981,7 @@ export default function Home() {
                 Above 40, premiums step up in published age bands: 41–50 (×1.5),
                 51–60 (×2.2), 61–70 (×3.5), 71–80 (×5.5). Health adjustments are
                 on top: Preferred (non-smoker, healthy) gets −10%,
-                smokers/controlled conditions get +40%. Your rate band is locked
-                for life from the day you sign up.
+                smokers/controlled conditions get +40%.
               </div>
             </details>
             <details className="faq-item">
@@ -1049,8 +1046,8 @@ export default function Home() {
             Join the Finally Peace <span className="serif">waitlist.</span>
           </h2>
           <p>
-            We&apos;re launching soon. Early members get locked-in
-            founder pricing and influence the product before launch.
+            We&apos;re launching soon. Early members get founder
+            pricing and influence the product before launch.
           </p>
           <form className="signup-form" onSubmit={handleWaitlist}>
             <input

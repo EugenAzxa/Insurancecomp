@@ -9,7 +9,7 @@ function cannedReply(q: string): string {
     return "Hi! Happy to help. You can ask me anything about Finally Peace — what's covered, how to sign up, pricing, cancellation, or how to install the app. What's on your mind?";
 
   if (/price|cost|how much|\$15|15.?month|pricing|cheap|afford|fee/i.test(t))
-    return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Your rate is locked at your signup age and never increases, even as you get older.";
+    return "Finally Peace is $15/month — one flat price, no hidden fees, no tiers. Cancel anytime, no commitment.";
   if (/what.*includ|what.*get|what.*cover|benefit|plan|everything/i.test(t))
     return "Your $15/month subscription covers everything: funeral arrangements (cremation, burial, or aquamation), legal preferences (will, POA, estate paperwork), body transportation worldwide including international repatriation, and a secure profile where you customize and save every choice.";
   if (/cancel|quit|stop|leave|refund/i.test(t))
@@ -19,7 +19,7 @@ function cannedReply(q: string): string {
   if (/sign.?up|join|start|how.*work|enroll|register|begin|get started/i.test(t))
     return "Signing up takes about 8 minutes on your phone — no medical exam, just a 5-question health questionnaire. Tap the Start your subscription button on the plan card, or join the waitlist at the bottom of the page. We're launching soon.";
   if (/age|old|young|18|75|eligib/i.test(t))
-    return "Finally Peace is available from age 18 to 75. The earlier you join, the lower your locked-in rate — a 30-year-old who signs up today keeps that rate at 65.";
+    return "Finally Peace is available from age 18 to 75. The earlier you join, the simpler it is to have everything organized and saved for your family.";
   if (/exam|medical|health question|doctor|test/i.test(t))
     return "No medical exam required — just a quick 5-question health questionnaire at signup. Most people are approved instantly.";
   if (/funeral|cremation|burial|casket|service|ceremony/i.test(t))
@@ -51,7 +51,7 @@ About Finally Peace:
 - Finally Peace is a $15/month subscription for end-of-life planning, with a community and a secure profile to customize and save every choice
 - One flat price — no tiers, no hidden fees, no medical exam required
 - Launching in Ontario first; currently accepting members worldwide
-- Rate is locked at signup age and never increases
+- One flat $15/month price, cancel anytime
 
 What the $15/month membership lets you organize (Finally Peace is a planning service — partners deliver the actual services; we do not pay for funerals or transport):
 FUNERAL: Choose cremation, traditional burial, green burial, or aquamation. Save your casket/urn preference. Full service OR direct cremation — your choice. Record memorial & obituary wishes. Every detail saved for your family.

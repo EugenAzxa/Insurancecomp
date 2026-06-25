@@ -83,8 +83,8 @@ export const POSTS: Post[] = [
     readMins: 4,
     body: [
       { type: "p", text: "Most people assume end-of-life planning is something to think about \"later.\" But the math, and the peace of mind, both favor starting sooner." },
-      { type: "h2", text: "Locking in a lower rate" },
-      { type: "p", text: "Coverage is priced by age. The younger and healthier you are when you start, the lower your rate — and a good plan locks that rate for life. Someone who starts at 32 keeps that 32-year-old rate decades later." },
+      { type: "h2", text: "Getting ahead of it early" },
+      { type: "p", text: "Starting young means your wishes are documented and your plan is in place long before anyone needs it. There's no rush, no pressure, and nothing left to figure out under stress later." },
       { type: "h2", text: "Sparing your family the scramble" },
       { type: "p", text: "When your wishes are documented and your arrangements are pre-decided, your family isn't left guessing during the hardest week of their lives. They simply follow the plan you left them." },
       { type: "quote", text: "Planning ahead isn't about expecting the worst. It's about making sure the people you love never have to improvise." },
