@@ -731,27 +731,28 @@ export default function Home() {
               Real coverage. <span className="serif">Real service.</span>
             </h2>
             <p className="section-sub">
-              Built differently from the inside out - but with a 90-year-old
-              product underneath.
+              Built differently from the inside out - backed by proven,
+              licensed partners underneath.
             </p>
           </div>
           <div className="why-grid">
             <div className="why-card">
               <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-              <h3>Backed by a real carrier</h3>
+              <h3>Backed by real partners</h3>
               <p>
-                Your policy is underwritten by a world-class licensed
-                carrier. Capital reserves, regulator oversight, the
-                works. We handle the experience; they handle the underwriting.
+                Finally Peace is the planning layer - the services are
+                delivered by licensed, world-class partners with capital
+                reserves and regulator oversight. We organize the experience;
+                our partners handle the rest.
               </p>
             </div>
             <div className="why-card">
               <div className="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <h3>Concierge, not a call center</h3>
               <p>
-                When your family calls Finally Peace, they get one real person who
-                handles everything: funeral home, casket, transport, paperwork,
-                even the cleanup of your apartment.
+                When your family reaches out, one real person guides them
+                through it all - coordinating the funeral home, transport, and
+                paperwork through our vetted partner network.
               </p>
               </div>
             <div className="why-card">
