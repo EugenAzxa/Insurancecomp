@@ -430,9 +430,9 @@ export default function Home() {
               </svg>
               <h3>Transportation</h3>
               <p>
-                Body transport worldwide. International repatriation if
-                you pass abroad. Family travel covered for distant relatives who
-                need to be there.
+                Optional add-ons, ready when you need them: body transport,
+                international repatriation, and family travel - coordinated
+                through our partner network and saved to your profile.
               </p>
             </div>
           </div>
