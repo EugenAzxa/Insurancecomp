@@ -21,7 +21,7 @@ function cannedReply(q: string): string {
   if (/age|old|young|18|75|eligib/i.test(t))
     return "Finally Peace is available from age 18 to 75. The earlier you join, the simpler it is to have everything organized and saved for your family.";
   if (/exam|medical|health question|doctor|test/i.test(t))
-    return "No medical exam required — just a quick 5-question health questionnaire at signup. Most people are approved instantly.";
+    return "No medical exam required — just a quick 5-question health questionnaire at signup. Applications are reviewed and approved manually, usually within a few days.";
   if (/funeral|cremation|burial|casket|service|ceremony/i.test(t))
     return "Your subscription covers the full funeral: cremation, traditional burial, green burial, or aquamation — your choice. Casket or urn, live-streamed memorial, obituary in 2 publications, and 10 certified death certificates are all included.";
   if (/legal|will|poa|estate|power of attorney|probate/i.test(t))

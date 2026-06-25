@@ -631,8 +631,8 @@ export default function Home() {
                 <span className="ic-x">×</span>2–4 weeks
               </div>
               <div className="col-atlas">
-                <span className="ic-check">✓</span>Minutes - no exam, subject to
-                approval
+                <span className="ic-check">✓</span>Days - manually reviewed &amp;
+                approved, no exam
               </div>
             </div>
 
