@@ -129,6 +129,20 @@
 .sub-btn-ghost:hover { border-color: #2563eb; color: #2563eb; }
 .sub-fine { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 12px; }
 
+/* Privacy / data notice */
+.sub-privacy {
+  display: flex; gap: 12px; align-items: flex-start;
+  margin-top: 16px; padding: 14px 16px;
+  background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px;
+}
+.sub-privacy-ico {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px;
+  background: #eff6ff; color: #2563eb;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.sub-privacy-text { font-size: 12.5px; line-height: 1.55; color: #64748b; }
+.sub-privacy-text strong { display: block; color: #0f172a; font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+
 /* Plan card */
 .sub-plan-card {
   background: linear-gradient(150deg, #0f172a, #1e3a8a);

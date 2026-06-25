@@ -33,11 +33,23 @@ export default function SubscribePage() {
 
   async function handleCheckout() {
     setLoading(true);
+    const payload = { plan: "finally-peace", email, name: fullName, age, gender, phone, address, postal, city, country };
+
+    // 1) Save the signup to our records (non-blocking — never stops the flow).
+    try {
+      await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch { /* logged server-side; don't block the user */ }
+
+    // 2) Proceed to checkout if configured, else confirm the waitlist spot.
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan: "finally-peace", email, name: fullName, age, gender, phone, address, postal, city, country }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) {
@@ -181,7 +193,21 @@ export default function SubscribePage() {
             <button className="sub-btn" disabled={!fullName || !age || !gender || !email || !address || !postal || !country} onClick={() => setStep(2)}>
               Continue →
             </button>
-            <p className="sub-fine">No spam. We email you once when it&apos;s your turn.</p>
+
+            {/* Data / privacy notice */}
+            <div className="sub-privacy">
+              <span className="sub-privacy-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div className="sub-privacy-text">
+                <strong>Your information is protected.</strong>
+                We securely store the details you provide — your name, contact
+                details, age, and location — solely to confirm eligibility, reserve
+                your place, and contact you about your coverage. Handled under strict
+                confidentiality and never sold or shared with third parties.
+              </div>
+            </div>
+            <p className="sub-fine">No spam — we&apos;ll only reach out about your membership.</p>
           </>
         )}
 
